@@ -6,7 +6,7 @@
     font-family: Avenir, sans-serif;
 }
 #div1{
-    width: 20%;
+    width: 100%;
 }
 h1{
     float: left;
@@ -20,7 +20,7 @@ section{
 
 }
 nav{
-    margin-top: 100%;
+    margin-top: 20%;
     border: solid 1px black;
     display: flex;
     width: 500px; 
@@ -37,10 +37,10 @@ nav ul{
 }
 
 nav ul li{
-    
+    margin-top: -6px;
     float: left;
     width: 100%;
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 
@@ -51,7 +51,10 @@ nav ul::after{
 }
 
 nav a{
-    display: block;
+
+    display: flex;
+    flex-direction: row
+;
     text-decoration: none;
     color: black;
     border-bottom: 2px solid transparent;
@@ -86,11 +89,9 @@ nav > ul li:hover .sous{
     border-bottom: none;
     background-color: RGBa(200,200,200,0.1);
 }
-.deroulant > a::after{
-    content:" ▼";
-    font-size: 12px;
+#der{
+margin-left: 350px;
 }
-
 .conteneur{
   margin: 50px 20px;
   height: 1500px;
@@ -98,6 +99,7 @@ nav > ul li:hover .sous{
 #div2{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 #addImg{
     display: flex;
@@ -109,8 +111,11 @@ nav > ul li:hover .sous{
     display: block;
 }
 #image1{
-    color: red;
+    color: black;
     display: block;
     font-size: 10px;
     margin-top: 0px;
+}
+#envoyer{
+    margin-right: 390px;
 }
