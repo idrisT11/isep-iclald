@@ -4,7 +4,10 @@
     margin: 0px;
     padding: 0px;
     font-family: Avenir, sans-serif;
+}body{
+    background :linear-gradient(45deg, #80ff72,#7ee8fa);
 }
+
 #div1{
     width: 100%;
 }
@@ -37,6 +40,7 @@ nav ul{
 }
 
 nav ul li{
+    margin-left: 7px;
     margin-top: -6px;
     float: left;
     width: 100%;
@@ -100,6 +104,12 @@ margin-left: 350px;
     flex-direction: row;
     justify-content: space-between;
 }
+#input{
+    padding: 7px;
+}
+#msg{
+    padding: 7px;
+}
 #addImg{
     display: flex;
     align-items: flex-start;
@@ -117,4 +127,7 @@ margin-left: 350px;
 }
 #envoyer{
     margin-right: 390px;
+}
+#deroulant{
+    padding: 7px;
 }
