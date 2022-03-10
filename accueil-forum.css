@@ -7,11 +7,53 @@
 }
 body{
     margin-top: 150px;
+    /*background :linear-gradient(45deg, #80ff72,#7ee8fa);*/
 }
-#postes{
-    margin-left: 250px;
+#head{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
 }
-div{
+#bas{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+#head2{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);
+    padding: 10px;
+
+
+}
+svg { 
+    display: inline-block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: -1; 
+    } 
+    .vague { 
+    display: inline-block; 
+    position: absolute; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    } 
+#head3{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);
+    padding: 10px;
+
+
+}
+#div{
+    padding: 10px;
     width: 500px;
     height: 86px;
     border: solid 1px black;
@@ -19,6 +61,10 @@ div{
     position: sticky;
     top: 0px;
     font-size: 12px;
+    background-color: RGBa(240,240,240,0.20);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 7px;
 }
 .image-ronde{
     width : 50px; height : 50px;
@@ -46,17 +92,65 @@ h2{
 }
 #page{
     display: flex;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
+
 }
 #recherche{
-    width: 250px;
-    height: 500px;
+    size: 100%;
+    padding: 15px;
     border: solid 1px black;
     background-color: white;
     position: sticky;
     top: 0px;
     font-size: 35px;
-    margin-right: 250px
+    margin-bottom: 0px;
+    background-color: RGBa(240,240,240,0.20);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 7px;
+
+
+
+}
+#recherchebtn{
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 50%;
+    backdrop-filter: blur(12px);
+    border: 0;
+    font-size: 17px;
+    padding: 5px;
+    margin-left: 47px;
+    cursor: pointer;
+
+}
+
+#new{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+#input{
+    margin-top: 20px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: transparent;
+}
+#div9{
+    
+    gap: 10px 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+#popo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
 }
