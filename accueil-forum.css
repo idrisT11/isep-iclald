@@ -8,16 +8,19 @@
 body{
     margin-top: 150px;
     /*background :linear-gradient(45deg, #80ff72,#7ee8fa);*/
+    background-image: url("blurry-gradient-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 #head{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
 }
 #bas{
     margin-top: 15px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     }
 #head2{
@@ -29,20 +32,7 @@ body{
 
 
 }
-svg { 
-    display: inline-block; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    z-index: -1; 
-    } 
-    .vague { 
-    display: inline-block; 
-    position: absolute; 
-    width: 100%; 
-    top: 0; 
-    left: 0; 
-    } 
+
 #head3{
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 11px;
@@ -54,8 +44,8 @@ svg {
 }
 #div{
     padding: 10px;
-    width: 500px;
-    height: 86px;
+    width: 600px;
+    height: 125px;
     border: solid 1px black;
     background-color: white;
     position: sticky;
@@ -94,6 +84,8 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
 
 }
 #recherche{
@@ -112,18 +104,26 @@ h2{
 
 
 
+
+}
+#hrech{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 #recherchebtn{
 
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 7px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    width: 50%;
+    width: 70%;
     backdrop-filter: blur(12px);
     border: 0;
     font-size: 17px;
     padding: 5px;
-    margin-left: 47px;
+    margin-left: 23px;
+    margin-top: 25px;
     cursor: pointer;
 
 }

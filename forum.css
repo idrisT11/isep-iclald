@@ -4,10 +4,12 @@
     margin: 0px;
     padding: 0px;
     font-family: Avenir, sans-serif;
-    background-image:url(C:\Users\frolo\OneDrive\Documents\GitHub\isep-iclald\fon1.svg);
+
 }body{
-    /*background :linear-gradient(45deg, #80ff72,#7ee8fa);*/
-    background-image:url(C:\Users\frolo\OneDrive\Documents\GitHub\isep-iclald\fon1.svg);
+    background :linear-gradient(45deg, #80ff72,#7ee8fa);
+    background-image: url("blurry-gradient-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 #div1{
