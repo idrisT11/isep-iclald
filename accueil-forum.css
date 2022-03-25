@@ -6,19 +6,139 @@
     font-family: Avenir, sans-serif;
 }
 body{
-    margin-top: 150px;
+    /*background-image: url("blurry-gradient-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+
+
 }
-#postes{
-    margin-left: 250px;
+#headerz{
+    display: flex;
+    margin-top: 15px;
+
 }
-div{
-    width: 500px;
-    height: 86px;
+#dov{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);*/
+    padding: 10px;
+
+    background-image: url("GRANDE\ VAGUE.PNG");
+    background-size: 100% ;
+    background-repeat: no-repeat;
+
+}
+#vague{
+    height: 80PX;
+    background-image: url("VAGUOUSSE.PNG");
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    margin-top:0PX;
+}
+header div{
+    display: flex;
+    flex: 1;
+}
+header nav{
+    display: flex;
+    flex: 2;
+    align-items: baseline;
+}
+header nav ul{
+    
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+}
+#cbtn{
+    display: flex;
+    justify-content: end;
+
+    margin-right: 10px;
+}
+#im{
+    margin-top: -45px;
+}
+
+header nav ul li{
+    margin-left: 7px;
+    margin-top: -6px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+nav a{
+
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: rgb(0, 0, 0);
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -35PX;
+}
+#bas{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+#head2{
+   background-color: #80ff72;
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);
+    padding: 10px;
+
+}
+#h1{
+    text-decoration: none;
+    color: black;
+}
+
+#head3{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 11px;/*
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);*/
+    backdrop-filter: blur(12px);
+    padding: 10px;
+    border-left: solid black 7px;
+    border-bottom: solid black 4px;
+    
+}
+#div{
+    padding: 10px;
+    width: 600px;
+    height: 125px;
     border: solid 1px black;
     background-color: white;
     position: sticky;
     top: 0px;
     font-size: 12px;
+    /*background-color: RGBa(240,240,240,0.70);*/
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 7px;
+    background :url("VAGUE.PNG");
+    background-repeat: no-repeat;
+    background-size: 102%;
+    
 }
 .image-ronde{
     width : 50px; height : 50px;
@@ -35,28 +155,91 @@ h2{
     text-decoration: underline;
     font-size: 15px;
 }
+#text{
+    margin-top: 5px;
+}
 #div4{
     margin-left: 3px;
+}
+#connexionbtn{
+    width: 100px;
+    cursor: pointer;
 }
 #div3{
 
     display: flex;
     align-items: center;
-    margin-top: 3px;
+    margin-top: -8px;
 }
 #page{
     display: flex;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    margin-top: 25px;
 }
 #recherche{
-    width: 250px;
-    height: 500px;
+    size: 100%;
+    padding: 15px;
     border: solid 1px black;
     background-color: white;
     position: sticky;
     top: 0px;
     font-size: 35px;
-    margin-right: 250px
+    margin-bottom: 0px;
+    background-color: RGBa(240,240,240,0.80);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 7px;
+    background :url("RECHERCHE.PNG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#hrech{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn2{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 70%;
+    backdrop-filter: blur(12px);
+    border: 0;
+    font-size: 17px;
+    padding: 5px;
+}
+#recherchebtn{
+    margin-left: 23px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#new{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ 
+}
+
+#input{
+    margin-top: 20px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: transparent;
+}
+#div9{
+    
+    gap: 10px 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+#popo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
 }

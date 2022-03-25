@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health's Fab</title>
+</head>
+<body>
+
+
+    <main>
+
+        <div id="connexionPanel">
+            <h1>Connexion</h1>
+            <div id="error">
+    
+            </div>
+            <form action="connexion.php" method="post">
+                <div class="formElem">
+                    <label for="username">E-mail </label>
+                    <input type="text" name="username" id="username">
+                </div>
+
+                <div class="formElem">
+                    <label for="password">Mot de passe </label>
+                    <input type="password" name="password" id="password">
+                </div>
+    
+
+    
+                <input type="submit" value="Entrer" id="submit" class="submitOff">
+    
+            </form>
+
+            <hr>
+            <div>
+                <a href="./recupPassword.php">Mot de passe oublié ?</a>
+                <a href="./inscription.html">Créer un compte</a>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script>
+        let errorElem = document.getElementById('error'),
+            email = document.getElementById('username'),
+            password = document.getElementById('password');
+
+        let submit = document.getElementById('submit');
+
+        let emailAllowSubmit = false,
+            passwordAllowSubmit = false;
+
+        
+        window.onload = ()=>{
+            emailAllowSubmit = email.value != '';
+            passwordAllowSubmit = password.value != '';
+
+            setSubmitButtonOn(emailAllowSubmit && passwordAllowSubmit);
+        }
+
+
+        email.addEventListener('keyup', (e)=>{
+
+            if (e.target.value != '') 
+            {
+                emailAllowSubmit = true;   
+
+                if (emailAllowSubmit && passwordAllowSubmit) 
+                    setSubmitButtonOn(true);
+            }
+            else
+            {
+                emailAllowSubmit = false; 
+                setSubmitButtonOn(false);
+            }
+        });
+
+        password.addEventListener('keyup', (e)=>{
+
+            if (e.target.value != '') 
+            {
+                passwordAllowSubmit = true;   
+
+                if (emailAllowSubmit && passwordAllowSubmit) 
+                    setSubmitButtonOn(true);
+            }
+            else
+            {
+                passwordAllowSubmit = false; 
+                setSubmitButtonOn(false);
+            }
+        });
+
+        submit.addEventListener('click', (e)=>{
+
+            if (emailAllowSubmit && passwordAllowSubmit) 
+            {
+                
+            }
+            else
+                e.preventDefault();
+        });
+
+
+        function setSubmitButtonOn(value) {
+            
+            if (value) 
+            {
+                submit.className = 'submitOn';    
+            }
+            
+            else
+            {
+                submit.className = 'submitOff';
+            }
+        }
+
+
+    </script>
+
+
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .submitOn{
+            background-color: #08e474;
+            color:white;
+
+            padding: 8px;
+            border-radius: 4px;
+            border: 0;
+            box-shadow: 0 0 2px #08e474;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+            cursor: pointer;
+        }
+
+        .submitOff{
+            opacity: 0.7;
+            background-color: white;
+            color:#08e474;
+
+            padding: 8px;
+            border-radius: 4px;
+            border: 0;
+            box-shadow: 0 0 2px #08e474;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+            cursor: pointer;
+        }
+
+        main{
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #connexionPanel{
+            background-color: white;
+            border-radius: 7px;
+            box-shadow: 0px 0px 35px 5px #08e474;
+
+            width: 25%;
+            padding: 30px;
+        }
+
+        #connexionPanel h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #555;
+
+            margin-bottom: 50px;
+        }
+
+        #connexionPanel form{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+
+        }
+
+        
+        #connexionPanel .formElem{
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .formElem label{
+            flex: 1;
+        }
+        .formElem input{
+            flex: 2;
+        }
+
+    </style>
+</body>
+</html>
