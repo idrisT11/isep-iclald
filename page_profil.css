@@ -1,0 +1,61 @@
+body
+{
+	background: linear-gradient(45deg, #80ff72, #7ee8fa);
+	
+}
+figure
+{
+	text-align: center;
+}
+
+figure + p
+{
+	text-align: center;
+}
+
+
+h4
+{
+	text-decoration: underline;
+	font-size: 1.2em;
+}
+
+h5
+{
+
+	font-size: 1em;
+	text-shadow: 1px;
+	margin: 2px;
+}
+
+#perso
+{
+	box-shadow: 2px 3px 4px;
+	margin: 4px;
+	padding: 1px;
+	border: 1px solid white;
+	width: 400px;
+	text-align: center;
+	background-color: azure;
+}
+
+#autres
+{
+	box-shadow: 2px 3px 4px;
+	margin: 4px;
+	padding: 10px;
+	border: 1px solid white;
+	width: 400px;
+	height:300 ;
+	background-color: azure;
+}
+
+#conteneur
+{
+	display: flex;
+	justify-content: space-between;
+	opacity: 3;
+	height: 560px;
+
+
+}
