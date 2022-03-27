@@ -132,7 +132,7 @@ nav a:hover{
     border-radius: 7px;
     background :url("VAGUE.PNG");
     background-repeat: no-repeat;
-    background-size: 102%;
+    background-size: 100%;
 
 }
 .image-ronde{
@@ -159,7 +159,9 @@ h2{
 #connexionbtn{
     width: 60px;
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    justify-content: end;
 }
 #div3{
 
@@ -244,7 +246,7 @@ h2{
 }
 #titre{
     font-family: "gill sans";
-    font-size: 2em;
+    font-size: 20px;
     text-align: right;
     display: flex;
     justify-content: end;
