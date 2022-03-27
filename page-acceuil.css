@@ -5,7 +5,7 @@
     padding: 0px;
     font-family: Avenir, sans-serif;
 }
-body{
+#body{
     /*background-image: url("blurry-gradient-haikei.svg");
     background-repeat: no-repeat;
     background-size: 100%;*/
@@ -15,31 +15,30 @@ body{
 
 
 }
-#headerz{
+#header{
     display: flex;
-    margin-top: 15px;
 
 }
-#dov{
+.im{
+    height: 90px;
+    width: 90px;
+}
+.dov{
     display: flex;
     flex-direction: column;
     /*background-color: rgba(255, 255, 255, 0.5);
     border-radius: 11px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     backdrop-filter: blur(12px);*/
-    padding: 10px;
-
-    background-image: url("GRANDE\ VAGUE.PNG");
+    margin: 10px;
+    background-image: url("GRANDE VAGUE.PNG");
     background-size: 100% ;
     background-repeat: no-repeat;
 
 }
-#vague{
-    height: 80PX;
-    background-image: url("VAGUOUSSE.PNG");
-    background-size: 100% ;
-    background-repeat: no-repeat;
-    margin-top:0PX;
+#dov{
+    flex-direction: row-reverse;
+
 }
 header div{
     display: flex;
@@ -59,11 +58,7 @@ header nav ul{
 #cbtn{
     display: flex;
     justify-content: end;
-
     margin-right: 10px;
-}
-#im{
-    margin-top: -45px;
 }
 
 header nav ul li{
@@ -162,8 +157,9 @@ h2{
     margin-left: 3px;
 }
 #connexionbtn{
-    width: 100px;
+    width: 60px;
     cursor: pointer;
+    margin-right: 5px;
 }
 #div3{
 
@@ -205,11 +201,14 @@ h2{
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 7px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    width: 70%;
+    width: 90px;
+    height: 60px;
     backdrop-filter: blur(12px);
     border: 0;
     font-size: 17px;
     padding: 5px;
+    justify-content: end;
+
 }
 #recherchebtn{
     margin-left: 23px;
@@ -246,6 +245,8 @@ h2{
 #titre{
     font-family: "gill sans";
     font-size: 2em;
-    margin-left: 4em ;
+    text-align: right;
+    display: flex;
+    justify-content: end;
 
 }
