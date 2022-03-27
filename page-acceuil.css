@@ -17,11 +17,13 @@
 }
 #header{
     display: flex;
-
+    background-image: url("GRANDE VAGUE.PNG");
+    background-size: 1440px 150px ;
+    background-repeat: no-repeat;
 }
 .im{
-    height: 90px;
-    width: 90px;
+    height: 110px;
+    width: 110px;
 }
 .dov{
     display: flex;
@@ -30,15 +32,13 @@
     border-radius: 11px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     backdrop-filter: blur(12px);*/
-    margin: 10px;
-    background-image: url("GRANDE VAGUE.PNG");
-    background-size: 100% ;
-    background-repeat: no-repeat;
+
+
 
 }
 #dov{
     flex-direction: row-reverse;
-
+margin:15px;
 }
 header div{
     display: flex;
@@ -46,7 +46,8 @@ header div{
 }
 header nav{
     display: flex;
-    flex: 2;
+    flex: 4;
+
     align-items: baseline;
 }
 header nav ul{
@@ -54,6 +55,7 @@ header nav ul{
     display: flex;
     list-style-type: none;
     width: 100%;
+    font-size: 20px;
 }
 #cbtn{
     display: flex;
@@ -63,7 +65,7 @@ header nav ul{
 
 header nav ul li{
     margin-left: 7px;
-    margin-top: -6px;
+    margin-top: 30px;
     float: left;
     width: 100%;
     text-align: left;
@@ -94,6 +96,55 @@ nav a:hover{
     justify-content: space-between;
     align-items: center;
 }
+
+
+
+
+
+
+
+
+#titre {
+    font-family: Avenir, sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 500px;
+    padding-right: 50px;
+
+    background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/nordea-gdynia-office-2.jpeg");
+    background-repeat: no repeat;
+    background-size: 100%;
+}
+
+#suite{
+    font-family: Avenir, sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 650px;
+    padding-left: 50px;
+
+    background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/halo.jpeg");
+    background-repeat: no repeat;
+    background-size: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #head2{
     background-color: #80ff72;
     border-radius: 11px;
@@ -243,12 +294,4 @@ h2{
     display: flex;
     flex-direction: column;
     gap: 15px 0px;
-}
-#titre{
-    font-family: "gill sans";
-    font-size: 20px;
-    text-align: right;
-    display: flex;
-    justify-content: end;
-
 }
