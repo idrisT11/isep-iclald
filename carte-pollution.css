@@ -5,24 +5,36 @@
     padding: 0px;
     font-family: Avenir, sans-serif;
 }
-body{
+#body{
     /*background-image: url("blurry-gradient-haikei.svg");
     background-repeat: no-repeat;
     background-size: 100%;*/
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
-
 
 
 }
 #header{
     display: flex;
     background: rgba(96, 189, 123, 0.97);
-   /* background-image: url("GRANDE VAGUE.PNG");
-    background-size: 1440px 150px ;
-    background-repeat: no-repeat;*/
+    /* background-image: url("GRANDE VAGUE.PNG");
+     background-size: 1440px 150px ;
+     background-repeat: no-repeat;*/
 }
 
+
+.dov{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);*/
+
+
+
+}
 #dov{
     flex-direction: row-reverse;
     margin:5px;
@@ -103,7 +115,6 @@ nav a:hover{
     background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/nordea-gdynia-office-2.jpeg");
     background-repeat: no repeat;
     background-size: 100%;
-
 }
 
 #suite{
@@ -145,6 +156,8 @@ nav a:hover{
     text-decoration: none;
     color: black;
 }
+
+
 #div{
     padding: 10px;
     width: 600px;
@@ -185,7 +198,7 @@ nav a:hover{
     backdrop-filter: blur(12px);
     border: 0;
     font-size: 17px;
-margin-top:25px;
+    margin-top:25px;
     margin-right:15px;
 
     justify-content: end;
@@ -193,29 +206,18 @@ margin-top:25px;
 
 }
 
-footer{
 
-    width: 100%;
-    border-top: 1px dashed #000000;
-    flex-shrink: 0;
-    flex-direction: column;
-    background: #292a28;
-    color: #c2ceca;
 
+#carte{
+    background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/france-carte-politique-de-la-france-divisions-administratives-regions-metropolitaines-carte-vectorielle-plate-simple-avec-etiquettes-2da55ph.jpeg");
+    width: 1300px;
+    height: 1270px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
 }
 
-.div2{
-    display: flex;
-    width: 1200px;
-    margin-left: 50px;
-    padding: 50px;
-    flex-direction: row;
-    justify-content: space-around;
-
-    font-size: 15px;
 
 
-}
 
 
 
