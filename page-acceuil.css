@@ -17,14 +17,13 @@
 }
 #header{
     display: flex;
-    background-image: url("GRANDE VAGUE.PNG");
+    background: rgba(96, 189, 123, 0.97);
+   /* background-image: url("GRANDE VAGUE.PNG");
     background-size: 1440px 150px ;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
-.im{
-    height: 110px;
-    width: 110px;
-}
+
+
 .dov{
     display: flex;
     flex-direction: column;
@@ -38,7 +37,7 @@
 }
 #dov{
     flex-direction: row-reverse;
-margin:15px;
+margin:5px;
 }
 header div{
     display: flex;
@@ -47,7 +46,6 @@ header div{
 header nav{
     display: flex;
     flex: 4;
-
     align-items: baseline;
 }
 header nav ul{
@@ -55,6 +53,7 @@ header nav ul{
     display: flex;
     list-style-type: none;
     width: 100%;
+    padding-top: 20px;
     font-size: 20px;
 }
 #cbtn{
@@ -110,7 +109,7 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     padding-top: 100px;
-    padding-bottom: 500px;
+    padding-bottom: 450px;
     padding-right: 50px;
 
     background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/nordea-gdynia-office-2.jpeg");
@@ -146,7 +145,7 @@ nav a:hover{
 
 
 #head2{
-    background-color: #80ff72;
+    background-color: #90d783;
     border-radius: 11px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     backdrop-filter: blur(12px);
@@ -210,9 +209,13 @@ h2{
 #connexionbtn{
     width: 60px;
     cursor: pointer;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: 25px;
+    margin-top: 20px;
     justify-content: end;
+}
+
+#im{
+    margin-left: 20px;
 }
 #div3{
 
@@ -255,12 +258,15 @@ h2{
     border-radius: 7px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     width: 90px;
-    height: 60px;
+    height: 50px;
     backdrop-filter: blur(12px);
     border: 0;
     font-size: 17px;
-    padding: 5px;
+margin-top:25px;
+    margin-right:15px;
+
     justify-content: end;
+    cursor: pointer;
 
 }
 #recherchebtn{
