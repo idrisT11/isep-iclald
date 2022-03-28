@@ -4,23 +4,24 @@
     margin: 0px;
     padding: 0px;
     font-family: Avenir, sans-serif;
+
 }
 body{
-    /*background-image: url("blurry-gradient-haikei.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;*/
+
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 
 
 
+}
+div1{
+    max-width: 100% ;
 }
 #header{
     display: flex;
     background: rgba(96, 189, 123, 0.97);
-   /* background-image: url("GRANDE VAGUE.PNG");
-    background-size: 1440px 150px ;
-    background-repeat: no-repeat;*/
 }
 
 #dov{
@@ -93,16 +94,31 @@ nav a:hover{
 
 #titre {
     font-family: Avenir, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     display: flex;
-    flex-direction: column;
-    padding-top: 100px;
+
+    padding-top: 80px;
     padding-bottom: 450px;
     padding-right: 50px;
 
     background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/nordea-gdynia-office-2.jpeg");
     background-repeat: no repeat;
     background-size: 100%;
+    justify-content: right;
+    flex-direction: row;
+
+
+
+
+}
+#text1{
+    width: 50%;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    justify-content: right;
+    flex-direction: row;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 
 }
 
@@ -145,7 +161,7 @@ nav a:hover{
     text-decoration: none;
     color: black;
 }
-#div{
+/*div{
     padding: 10px;
     width: 600px;
     height: 125px;
@@ -154,15 +170,15 @@ nav a:hover{
     position: sticky;
     top: 0px;
     font-size: 12px;
-    /*background-color: RGBa(240,240,240,0.70);*/
+    /*background-color: RGBa(240,240,240,0.70);
     backdrop-filter: blur(16px);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
     border-radius: 7px;
     background :url("VAGUE.PNG");
     background-repeat: no-repeat;
     background-size: 100%;
+*/
 
-}
 
 #connexionbtn{
     width: 60px;
@@ -210,12 +226,10 @@ footer{
     margin-left: 50px;
     padding: 50px;
     flex-direction: row;
-    justify-content: space-around;
-
+    justify-content: space-evenly;
     font-size: 15px;
 
 
 }
-
 
 
