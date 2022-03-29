@@ -21,6 +21,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
+    /*noinspection CssUnknownTarget*/
     background-image: url("GRANDE\ VAGUE.PNG");
     background-size: 102% ;
     background-repeat: no-repeat;
