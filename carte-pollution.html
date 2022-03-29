@@ -5,38 +5,53 @@
     <title>carte-pollution</title>
     <link rel="stylesheet" href="carte-pollution.css">
 </head>
-<body>
+<body id="body">
 
-<div id="div1">
-    <header id="header" class="dov" >
-        <div id="dov" class="dov">
+<div id="container">
+    <header id="header">
 
-            <div id="connexionbtn">
-                <form action="connexion.html">
-                    <input type="submit" name="connexion" value="connexion" class="btn2"  >
-                </form>
+        <div id="logo">
+            <img src="IM.png" alt="im" height="120" width="120">
+        </div>
+
+        <div id="navigateur" class="navi">
+            <div id="recherche" class="style">
+                <input type="text" placeholder="Search..">
             </div>
 
-            <nav>
+            <div class="style">
+                <nav id="nav" class="style">
+                    <ul>
+                        <li> <a class="navi" href="nouvel-acceuil.html">Acceuil</a></li>
+                        <li><a class="navi" href="#">Vos resultats</a></li>
+                        <li><a class="navi" href="carte-pollution.html">Carte Pollution</a></li>
+                        <li><a class="navi" href="accueil-forum.html">Forum</a></li>
+                        <li><a class="navi" href="#">Nous Contacter</a></li>
 
-                <ul>
-                    <li><a href="nouvel-acceuil.html">Acceuil</a></li>
-                    <li><a href="#">Vos resultats</a></li>
-                    <li><a href="carte-pollution.html">Carte Pollution</a></li>
-                    <li><a href="accueil-forum.html">Forum</a></li>
-                    <li><a href="#">Nous Contacter</a></li>
-                </ul>
-
-            </nav>
-            <div id="im" class="im">
-                <img src="IM.png" alt="im" height="120" width="120">
+                    </ul>
+                </nav>
             </div>
+
+        </div>
+
+        <div id="connexionbtn" >
+            <form action="connexion.html">
+                <input type="submit" value="Connexion" class="connexion" >
+            </form>
         </div>
 
     </header>
-<div id="carte" class="carte">
+    <div id="page">
+        <div id="haut">
+            <div id="infos">
 
-</div>
+            </div>
+            <div id="carte">
+
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
