@@ -94,7 +94,14 @@ h5
     border: 0;
     font-size: 16px;
     padding: 1px;
-    margin: 1px;
+    margin: 0.5px;
+    height: 40px;
+    text-align: center;
+}
+
+#back:active
+{
+	color: blue;
 }
 
 #head
