@@ -1,0 +1,21 @@
+#headerz{
+    display: flex;
+    margin-top: 15px;
+
+}
+
+/*noinspection CssUnknownTarget*/
+#dov{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);*/
+    padding: 10px;
+
+    background-image: url("GRANDE\ VAGUE.PNG");
+    background-size: 100% ;
+    background-repeat: no-repeat;
+
+}
