@@ -40,6 +40,7 @@ h5
 	width: 400px;
 	height:300 ;
 	background-color: azure;
+	border-radius: 8px;
 }
 
 #autres
@@ -51,6 +52,7 @@ h5
 	width: 400px;
 	height:300 ;
 	background-color: azure;
+	border-radius: 8px;
 }
 
 #conteneur
@@ -83,7 +85,16 @@ h5
 
 #back
 {
-	text-align: right;
+	background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 6%;
+
+    backdrop-filter: blur(12px);
+    border: 0;
+    font-size: 16px;
+    padding: 1px;
+    margin: 1px;
 }
 
 #head
