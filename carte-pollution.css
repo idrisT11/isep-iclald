@@ -1,35 +1,40 @@
 *
 
 {
-
-    margin:0;
-    padding:0;
-    height:100%;
+    margin: 0px;
+    padding: 0px;
     font-family: Avenir, sans-serif;
-
 }
-body{
-
+#body{
+    /*background-image: url("blurry-gradient-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
 
 
-
-}
-div1{
-    height: 20%;
-    width: 100%;
-    min-height:100%;
-    position:relative;
-    padding-bottom:100px;
 }
 #header{
     display: flex;
     background: rgba(96, 189, 123, 0.97);
+    /* background-image: url("GRANDE VAGUE.PNG");
+     background-size: 1440px 150px ;
+     background-repeat: no-repeat;*/
 }
 
+
+.dov{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);*/
+
+
+
+}
 #dov{
     flex-direction: row-reverse;
     margin:5px;
@@ -84,59 +89,49 @@ nav a:hover{
     align-items: flex-end;
     margin-top: -35PX;
 }
-
-#divin{
-    width: 100%;
-    height: 200%;
+#bas{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
+
 
 
 
 
 
 #titre {
-
-
     font-family: Avenir, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
-flex-shrink: 0;
-    padding: 50;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 450px;
+    padding-right: 50px;
 
     background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/nordea-gdynia-office-2.jpeg");
     background-repeat: no repeat;
     background-size: 100%;
-
-
-
-
-
-
-}
-/*#text1{
-    flex-shrink: 1;
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    justify-content: right;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-
 }
 
-/*suite{
-    height: 50%;
-    width: 100%;
+#suite{
     font-family: Avenir, sans-serif;
     font-size: 30px;
     display: flex;
     flex-direction: column;
-
+    padding-top: 150px;
+    padding-bottom: 650px;
+    padding-left: 50px;
 
     background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/halo.jpeg");
     background-repeat: no repeat;
     background-size: 100%;
 
 }
-*/
+
 
 
 
@@ -161,7 +156,9 @@ flex-shrink: 0;
     text-decoration: none;
     color: black;
 }
-/*div{
+
+
+#div{
     padding: 10px;
     width: 600px;
     height: 125px;
@@ -170,15 +167,15 @@ flex-shrink: 0;
     position: sticky;
     top: 0px;
     font-size: 12px;
-    /*background-color: RGBa(240,240,240,0.70);
+    /*background-color: RGBa(240,240,240,0.70);*/
     backdrop-filter: blur(16px);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
     border-radius: 7px;
     background :url("VAGUE.PNG");
     background-repeat: no-repeat;
     background-size: 100%;
-*/
 
+}
 
 #connexionbtn{
     width: 60px;
@@ -209,32 +206,18 @@ flex-shrink: 0;
 
 }
 
-#footer{
-    bottom:0;  /* on le colle en bas */
-    width:100%;
-    height:100px;
-
-    background-size: 100%;
-    color: #c2ceca;
-    position: absolute;
 
 
-}
-.fooot{
-    flex-direction: column;
-    background: #292a28;
+#carte{
+    background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/france-carte-politique-de-la-france-divisions-administratives-regions-metropolitaines-carte-vectorielle-plate-simple-avec-etiquettes-2da55ph.jpeg");
+    width: 1300px;
+    height: 1270px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
 }
 
-.div2{
-    display: flex;
-    width: 1200px;
-    margin-left: 50px;
-    padding: 50px;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 15px;
 
 
-}
+
 
 

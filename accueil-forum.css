@@ -20,6 +20,8 @@ body{
     margin-top: 15px;
 
 }
+
+/*noinspection CssUnknownTarget*/
 #dov{
     display: flex;
     flex-direction: column;
@@ -210,6 +212,8 @@ h2{
     border: 0;
     font-size: 17px;
     padding: 5px;
+    display: flex;
+    flex-direction: row-reverse ;
 }
 #recherchebtn{
     margin-left: 23px;
