@@ -169,3 +169,53 @@ h2{
     flex-direction: column;
 
 }
+
+#mb
+{
+
+}
+
+#lu
+{
+
+}
+
+
+.user1
+{
+    box-shadow: 1px 2px 2px 1px azure;
+    border: 0.5px black solid;
+    border-radius: 7px;
+    width:50% ;
+    height:100px ;
+
+}
+
+.user2
+{
+    box-shadow: 1px 2px 2px 1px azure;
+    border: 0.5px black solid;
+    border-radius: 7px;
+    width:50% ;
+    height:100px ;
+
+}
+
+.user3
+{
+    box-shadow: 1px 2px 2px 1px azure;
+    border: 0.5px black solid;
+    border-radius: 7px;
+    width:50% ;
+    height:100px ;
+
+}
+
+#page
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    flex-direction: column;
+}
