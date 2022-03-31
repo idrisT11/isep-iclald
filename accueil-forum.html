@@ -8,29 +8,39 @@
 <body>
     <div id="dov">
 
-        <div id="cbtn">
-            <input id="connexionbtn" type="submit" name="connexion" value="connexion" class="btn2">
-        </div>
-    <header id="headerz">
-        <div id="im">
-            <img src="IM.png" alt="im" width="80" height="80">
-                
-        </div>
-        <nav>
+        <header id="header">
 
-            <ul>
-                <li><a href="page-acceuil.html">Acceuil</a></li>
-                <li><a href="#">Vos resultats</a></li>
-                <li><a href="#">Carte Pollution</a></li>
-                <li><a href="accueil-forum.html">Forum</a></li>
-                <li><a href="#">Nous Contacter</a></li>
-            </ul>
-
-        </nav>
+            <div id="logo">
+                <img src="IM.png" alt="im" height="120" width="120">
+            </div>
     
-
-        
-   </header>
+            <div id="navigateur" class="navi">
+                <div id="recherche"  >
+                    <input type="text" placeholder="Search..">
+                </div>
+    
+                <div >
+                    <nav id="nav" class="style">
+                        <ul>
+                            <li> <a class="navi" href="nouvel-acceuil.html">Acceuil</a></li>
+                            <li><a class="navi" href="#">Vos resultats</a></li>
+                            <li><a class="navi" href="carte-pollution.html">Carte Pollution</a></li>
+                            <li><a class="navi" href="accueil-forum.html">Forum</a></li>
+                            <li><a class="navi" href="#">Nous Contacter</a></li>
+    
+                        </ul>
+                    </nav>
+                </div>
+    
+            </div>
+    
+            <div id="connexionbtn" >
+                <form action="connexion.html">
+                    <input type="submit" value="Connexion" class="connexion" >
+                </form>
+            </div>
+    
+        </header>
 </div>
 <div id="vague">
 
@@ -47,65 +57,65 @@
             </header>
         </div>
         <div id="bas">
-        <div id="postes">
-            
-            <div id="popo">
-                <div id =div onclick="RedirectionJavascript()">
-                    <div id="div3">
-                        <img id=pdp class="image-ronde" src="lafontaine.jpg" alt="pdp">
-                        <div id="div4">
-                            Jean De la Fontaine
-                            <p id="p1">
-                                Il y a 3 heures
+            <div id="postes">
+                
+                <div id="popo">
+                    <div id =div onclick="RedirectionJavascript()">
+                        <div id="div3">
+                            <img id=pdp class="image-ronde" src="lafontaine.jpg" alt="pdp">
+                            <div id="div4">
+                                Jean De la Fontaine
+                                <p id="p1">
+                                    Il y a 3 heures
+                                </p>
+                            </div>
+                        </div>
+                        <div id="text">
+                            <h2>
+                                Titre du Postes
+                            </h2>
+                            <p>
+                                C'est le texte du poste, a la fin de la ligne ca met ...
                             </p>
                         </div>
                     </div>
-                    <div id="text">
-                        <h2>
-                            Titre du Postes
-                        </h2>
-                        <p>
-                            C'est le texte du poste, a la fin de la ligne ca met ...
-                        </p>
-                    </div>
-                </div>
-                <div id="div">
-                    <div id="div3">
-                        <img id=pdp class="image-ronde" src="morts-kenny-south-park-2.jpg" alt="pdp">
-                        <div id="div4">
-                            Kenny
-                            <p id="p1">
-                                Il y a 27 minutes
+                    <div id="div">
+                        <div id="div3">
+                            <img id=pdp class="image-ronde" src="morts-kenny-south-park-2.jpg" alt="pdp">
+                            <div id="div4">
+                                Kenny
+                                <p id="p1">
+                                    Il y a 27 minutes
+                                </p>
+                            </div>
+                        </div>
+                        <div id="text">
+                            <h2>
+                                Titre du Postes
+                            </h2>
+                            <p>
+                                C'est le texte du poste, a la fin de la ligne ca met ...
                             </p>
                         </div>
-                    </div>
-                    <div id="text">
-                        <h2>
-                            Titre du Postes
-                        </h2>
-                        <p>
-                            C'est le texte du poste, a la fin de la ligne ca met ...
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="new">
+            <div id="new">
 
-            <div id="recherche">
-                <div id="hrech">
-                    <h2>
-                        Chercher un sujet
-                    </h2>
-                    <div id="div9">
-                        <input id="input" type="text" name="sujet" placeholder="Votre recherche" >
-                        <input id="recherchebtn" type="submit" name="Rechercher" value="rechercher" class="btn2">
+                <div id="recherche1">
+                    <div id="hrech">
+                        <h2>
+                            Chercher un sujet
+                        </h2>
+                        <div id="div9">
+                            <input id="input" type="text" name="sujet" placeholder="Votre recherche" >
+                            <input id="recherchebtn" type="submit" name="Rechercher" value="rechercher" class="btn2">
+                        </div>
                     </div>
-                </div>
-                <div class="carre_wesh" id="carre_haut_gauche"> </div>
-            </div> 
+                    <div class="carre_wesh" id="carre_haut_gauche"> </div>
+                </div> 
+            </div>
         </div>
-    </div>
     </div>
     <script>
         function RedirectionJavascript(){
