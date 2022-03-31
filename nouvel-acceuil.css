@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: column;
 }
-
 #header{
     top: 0;
     flex-direction: row;
@@ -48,18 +47,20 @@ header nav ul li {
 
 .style{
     padding: 5px ;
+
 }
 
 
 .navi{
     color: white;
     font-size: 20px;
-    padding: 5px;
+    padding: 15px;
     text-decoration: none;
 
 
 }
 #recherche{
+    justify-content: left;
 
 }
 
@@ -81,11 +82,8 @@ a:hover{
 
 }
 
-#intro{
-}
 
-#intro{
-}
+
 
 #intro{
     background-image: url("./AdobeStock_151481103-scaled.jpeg");

@@ -1,11 +1,28 @@
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 body
 {
 	background: linear-gradient(45deg, #80ff72, #7ee8fa);
-	
+	font-family: Exo-Regular;
+
+	overflow-x: hidden;
 }
 figure
 {
 	text-align: center;
+	z-index: 100;
+
+}
+
+figure img{
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+
+	box-shadow: 0 0 5px black;
 }
 
 figure + p
@@ -64,6 +81,8 @@ h5
 	opacity: 3;
 	height: 560px;
 	margin: 25px;
+	width: 70%;
+	margin: auto;
 
 
 }
@@ -82,8 +101,10 @@ h5
     padding: 7px;
     margin: 7px;
 
-    font-family: Exo-ExtraLight;
-    text-align: center;
+
+	font-family: Exo-ExtraLight;
+	text-align: right;
+	width: 90%;
 }
 
 .submitOff, .submitOn
@@ -113,7 +134,7 @@ h5
 	display: flex;
 	justify-content: space-between;
 	opacity: 3;
-	height: 200px;
+	height: 150px;
 }
 
 img
