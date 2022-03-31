@@ -1,0 +1,223 @@
+*
+
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+#body{
+    /*background-image: url("blurry-gradient-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+
+
+}
+#header{
+    display: flex;
+    background: rgba(96, 189, 123, 0.97);
+    /* background-image: url("GRANDE VAGUE.PNG");
+     background-size: 1440px 150px ;
+     background-repeat: no-repeat;*/
+}
+
+
+.dov{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);*/
+
+
+
+}
+#dov{
+    flex-direction: row-reverse;
+    margin:5px;
+}
+header div{
+    display: flex;
+    flex: 1;
+}
+header nav{
+    display: flex;
+    flex: 4;
+    align-items: baseline;
+}
+header nav ul{
+
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 20px;
+}
+#cbtn{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+header nav ul li{
+    margin-left: 7px;
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+nav a{
+
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: rgb(0, 0, 0);
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -35PX;
+}
+#bas{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+#titre {
+    font-family: Avenir, sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 450px;
+    padding-right: 50px;
+
+    background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/nordea-gdynia-office-2.jpeg");
+    background-repeat: no repeat;
+    background-size: 100%;
+}
+
+#suite{
+    font-family: Avenir, sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 650px;
+    padding-left: 50px;
+
+    background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/halo.jpeg");
+    background-repeat: no repeat;
+    background-size: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#head2{
+    background-color: #90d783;
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);
+    padding: 10px;
+
+}
+#h1{
+    text-decoration: none;
+    color: black;
+}
+
+
+#div{
+    padding: 10px;
+    width: 600px;
+    height: 125px;
+    border: solid 1px black;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    font-size: 12px;
+    /*background-color: RGBa(240,240,240,0.70);*/
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 7px;
+    background :url("VAGUE.PNG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+#connexionbtn{
+    width: 60px;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-top: 20px;
+    justify-content: end;
+}
+
+#im{
+    margin-left: 20px;
+}
+
+.btn2{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 90px;
+    height: 50px;
+    backdrop-filter: blur(12px);
+    border: 0;
+    font-size: 17px;
+    margin-top:25px;
+    margin-right:15px;
+
+    justify-content: end;
+    cursor: pointer;
+
+}
+
+
+
+#carte{
+    background-image: url("/Users/leamartin/Documents/GitHub/isep-iclald/france-carte-politique-de-la-france-divisions-administratives-regions-metropolitaines-carte-vectorielle-plate-simple-avec-etiquettes-2da55ph.jpeg");
+    width: 1300px;
+    height: 1270px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
