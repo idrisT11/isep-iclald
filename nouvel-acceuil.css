@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: column;
 }
-
 #header{
     top: 0;
     flex-direction: row;
@@ -47,19 +46,21 @@ header nav ul li {
 }
 
 .style{
-    padding: 12px ;
+    padding: 5px ;
+
 }
 
 
 .navi{
     color: white;
     font-size: 20px;
-    padding: 5px;
+    padding: 15px;
     text-decoration: none;
 
 
 }
 #recherche{
+    justify-content: left;
 
 }
 
@@ -80,6 +81,7 @@ a:hover{
     color: rgb(194, 206, 202);
 
 }
+
 
 
 
