@@ -63,6 +63,9 @@ header nav ul{
 #connexionbtn{
     width: 100px;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    color: black;
 }
 #im{
     margin-top: -45px;
@@ -101,7 +104,7 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     gap: 15px 0px;
-    margin-left: 10%;
+    margin-left: 25%;
 }
 #rep{
     display: flex;
@@ -112,7 +115,7 @@ nav a:hover{
 }
 .div{
     padding: 20px;
-    width: 50%;
+    width: 70%;
     padding-top: 15PX;
     border: solid 1px black;
     background-color: white;
@@ -130,7 +133,7 @@ nav a:hover{
 }
 #reponse
 {
-    width: 43%;
+    width: 63%;
     margin-left: 7%;
     margin-top: -15PX;
 }
