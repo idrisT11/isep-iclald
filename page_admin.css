@@ -172,7 +172,7 @@ h2{
 
 #mb
 {
-
+    font-size: 20;
 }
 
 #lu
@@ -218,4 +218,11 @@ h2{
     align-items: center;
     height: 400px;
     flex-direction: column;
+}
+
+#titre
+{
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    color: green;
 }
