@@ -3,21 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<title>Profil</title>
-	<link rel="stylesheet" type="text/css" href="new_page_profil.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font.css">
+	<link rel="stylesheet" type="text/css" href="/isep-web/static/style/page-profil.css">
+	<link rel="stylesheet" type="text/css" href="/isep-web/static/fonts/font.css">
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	
 </head>
 <body>
 	<header id="head">
 		<p>
 			<a href="Page d'accueil"><img src=".\IM.png" alt="Home"></a>
 		</p>
+		
 		<figure >
-			<img src=".\sissi.png" alt="Photo de profil" id="photo">
-			<figcaption>Jean de lafotaine</figcaption>
+			<form action="changeProfilPic" method="POST" enctype="multipart/form-data" id="formImage">
+				<label for="picInput">
+						<img src=" <?php echo $_SESSION['profil_pic']; ?> " alt="Photo de profil" id="photo">
+                        <input type="file" name="picInput" id="picInput" style="display: none;">
+                </label>
+				<figcaption>Jean de lafotaine</figcaption>
+				<label for="picInput" style="text-decoration: underline">
+					Modifier la photo
+				</label>
+			</form>
 		</figure>
 
 		<div class="formSub">
-            <input type="submit" value="< RETOUR" id="submit" class="submitOff">
+            <a type="submit" id="submit" class="submitOff" href="/isep-web/"> RETOUR </a>
         </div>
 
 	</header>
@@ -68,6 +79,18 @@
 
 		</p>
 	</div>
+
+
+	<script>
+		var imgInput = document.getElementById('picInput'),
+			imgPhoto = document.getElementById('photo');
+		var formImage = document.getElementById('formImage');
+
+		imgInput.addEventListener('change', (e)=>{
+			formImage.submit();
+			
+		});
+	</script>
 
 	
 			

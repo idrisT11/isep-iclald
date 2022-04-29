@@ -1,0 +1,186 @@
+*
+
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+body{
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+
+
+}
+#headerz{
+    display: flex;
+    margin-top: 15px;
+
+}
+#dov{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url("GRANDE\ VAGUE.PNG");
+    background-size: 102% ;
+    background-repeat: no-repeat;
+
+}
+#vague{
+    height: 80PX;
+    background-image: url("VAGUOUSSE.PNG");
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    margin-top:0PX;
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 9;
+}
+header div{
+    display: flex;
+    flex: 1;
+}
+header nav{
+    display: flex;
+    flex: 2;
+    align-items: baseline;
+}
+header nav ul{
+    
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+}
+#cbtn{
+    display: flex;
+    justify-content: end;
+
+    margin-right: 10px;
+}
+#connexionbtn{
+    width: 100px;
+    cursor: pointer;
+}
+#im{
+    margin-top: -45px;
+}
+
+header nav ul li{
+    margin-left: 7px;
+    margin-top: -6px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+nav a{
+
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: rgb(0, 0, 0);
+}
+#page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 25px;
+}
+#popo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
+    margin-left: 10%;
+}
+#rep{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    align-items: flex-end;
+    flex: 1;
+}
+.div{
+    padding: 20px;
+    width: 50%;
+    padding-top: 15PX;
+    border: solid 1px black;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    font-size: 12px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 7px;
+    background :url("VAGUE.PNG");
+    background-repeat: no-repeat;
+    background-size: 102%;
+    display: flex;
+    
+}
+#reponse
+{
+    width: 43%;
+    margin-left: 7%;
+    margin-top: -15PX;
+}
+.image-ronde{
+    width : 50px; height : 50px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+  }
+#p1{
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+h2{
+    text-decoration: underline;
+    font-size: 15px;
+}
+#text{
+    margin-top: 5px;
+    padding-left: 10PX;
+
+}
+#div3{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: -8px;
+    border-right: solid grey 2px;
+    padding-right: 10PX;
+
+}
+#div4{
+    margin-left: 3px;
+    width: 100%;
+}
+.btn2{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 70%;
+    backdrop-filter: blur(12px);
+    border: 0;
+    font-size: 17px;
+    padding: 5px;
+}
+#retour{
+transform: rotate(180deg);
+margin-left: 27%;
+margin-top: -15px;
+}
+

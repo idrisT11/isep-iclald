@@ -1,0 +1,235 @@
+*
+
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+
+}
+body{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+
+
+}
+div1{
+    max-width: 100% ;
+}
+#header{
+    display: flex;
+    background: rgba(96, 189, 123, 0.97);
+}
+
+#dov{
+    flex-direction: row-reverse;
+    margin:5px;
+}
+header div{
+    display: flex;
+    flex: 1;
+}
+header nav{
+    display: flex;
+    flex: 4;
+    align-items: baseline;
+}
+header nav ul{
+
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 20px;
+}
+#cbtn{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+header nav ul li{
+    margin-left: 7px;
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+nav a{
+
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: rgb(0, 0, 0);
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -35PX;
+}
+#bas{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+#titre {
+    font-family: Avenir, sans-serif;
+    font-size: 30px;
+    display: flex;
+
+    padding-top: 80px;
+    padding-bottom: 450px;
+    padding-right: 50px;
+
+    background-image: url("/isep-web/static/image/nordea-gdynia-office-2.jpeg");
+    background-repeat: no repeat;
+    background-size: 100%;
+    justify-content: right;
+    flex-direction: row;
+
+
+
+
+}
+#text1{
+    width: 50%;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    justify-content: right;
+    flex-direction: row;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+}
+
+#suite{
+    font-family: Avenir, sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 650px;
+    padding-left: 50px;
+
+    background-image: url("/isep-web/static/image/halo.jpeg");
+    background-repeat: no repeat;
+    background-size: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#head2{
+    background-color: #90d783;
+    border-radius: 11px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(12px);
+    padding: 10px;
+
+}
+#h1{
+    text-decoration: none;
+    color: black;
+}
+/*div{
+    padding: 10px;
+    width: 600px;
+    height: 125px;
+    border: solid 1px black;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    font-size: 12px;
+    /*background-color: RGBa(240,240,240,0.70);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 7px;
+    background :url("VAGUE.PNG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+*/
+
+
+#connexionbtn{
+    width: 60px;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-top: 20px;
+    justify-content: end;
+}
+
+#im{
+    margin-left: 20px;
+}
+
+.btn2{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 90px;
+    height: 50px;
+    backdrop-filter: blur(12px);
+    border: 0;
+    font-size: 17px;
+margin-top:25px;
+    margin-right:15px;
+
+    justify-content: end;
+    cursor: pointer;
+
+}
+
+footer{
+
+    width: 100%;
+    border-top: 1px dashed #000000;
+    flex-shrink: 0;
+    flex-direction: column;
+    background: #292a28;
+    color: #c2ceca;
+
+}
+
+.div2{
+    display: flex;
+    width: 1200px;
+    margin-left: 50px;
+    padding: 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 15px;
+
+
+}
+
+
