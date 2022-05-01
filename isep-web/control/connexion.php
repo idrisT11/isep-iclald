@@ -16,6 +16,7 @@
             $_SESSION['email'] = $email;
             $_SESSION['nom'] = get_from_user($db_connexion, $email, 'NOM');
             $_SESSION['prenom'] = get_from_user($db_connexion, $email, 'PRENOM');
+            $_SESSION['salle'] = get_from_user($db_connexion, $email, 'SALLE');
 
             header('Location: ./'); die();
             //include(__DIR__ . "\..\\view\\page-acceuil.php");

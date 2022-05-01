@@ -53,7 +53,7 @@
             <section id="content">
                 <div id="content_header">
                     <h1 id="title_content">
-                        Valeurs concernant la salle 11 :
+                        Valeurs concernant la salle <?php echo $_SESSION['salle']?> :
                     </h1>
 
                     <a href="#" id="configure_link">
@@ -77,10 +77,33 @@
                         <h1>Niveau d'humidité</h1>
                         <p>35%</p>
                     </div>
+
+                    <div class="zone_dash">
+                        <h1>Battement Cardiaque</h1>
+                        <p>80bpm</p>
+                    </div>
+                </div>
+
+
+                <div id="graph_screen">
+                    <div id=graph_interface>
+                        <button>Temperature</button>
+                        <button>humidité</button>
+                        <button>Niveau Sonore</button>
+                    </div>
+
+                    <canvas id="graph" style="width:100%;max-width:700px">
+
+                    </canvas>
                 </div>
 
             </section>
         </main>
     </div>
+
+    <script src="./static/script/dash.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script> 
 </body>
 </html>
