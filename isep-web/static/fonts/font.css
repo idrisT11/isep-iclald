@@ -22,3 +22,8 @@
     font-family: "Exo-Light-Italic";
     src: url("Exo-Light-Italic.otf") format("opentype");
 }
+
+@font-face {
+    font-family: "Lato";
+    src: url("Lato-Black.ttf");
+}

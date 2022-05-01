@@ -33,6 +33,11 @@
      
     }
 
+    else if (preg_match('/\/isep-web\/dash/i' , $request)) {
+        require __DIR__ . '/control/dashboard.php';
+     
+    }
+
     else if ($request == $origin . '') {
         require __DIR__ . '/control/acceuil.php';
     }
