@@ -12,9 +12,10 @@
         $_SESSION['profil_pic'] = get_profil_pic($db_connexion, $email);
 
 
-        echo "Bienvenu $nom $prenom";
+        //echo "Bienvenu $nom $prenom";
 
-        include(__DIR__ . "/../view/page-acceuil.php");
+        //include(__DIR__ . "/../view/page-acceuil.php");
+        include(__DIR__ . "/../view/acceuil.php");
     }
 
     else{

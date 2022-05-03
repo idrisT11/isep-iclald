@@ -1,69 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/fonts/font.css">
-    <title>TEST</title>
-</head>
-<body>
-    <div id="chat_conteneur">
-        <div id="header_conteneur">
-            <img src="../static/image/X.png" alt="go back" width="19px" height="19px" id="quit_chat">
-        </div>
-        <div id="message_conteneur">
 
-            <div class="user_message_conteneur">
-                <div class="user_message">
-                    Bonjour 
-                </div>
-                <img src="../static/image/sissi.png" width="48px" height="48px" class="user_pic">
+    <div id="chat_all">
+        <div id="chat_conteneur">
+            <div id="header_conteneur">
+                <img src="./static/image/X.png" alt="go back" width="19px" height="19px" id="quit_chat">
             </div>
+            <div id="message_conteneur">
 
-            <div class="admin_message_conteneur">
-                <img src="../static/image/admin.png" width="48px" height="48px" class="admin_pic">
-                <div class="admin_message">
-                    Bonjour Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita minima nihil cupiditate, quos porro eum nisi aliquam nulla tempore unde commodi earum doloremque! Omnis fuga beatae eligendi suscipit esse.
+                <div class="user_message_conteneur">
+                    <div class="user_message">
+                        Bonjour 
+                    </div>
+                    <img src="<?php echo $_SESSION['profil_pic']; ?>" width="48px" height="48px" class="user_pic">
+                </div>
+
+                <div class="admin_message_conteneur">
+                    <img src="./static/image/admin.png" width="48px" height="48px" class="admin_pic">
+                    <div class="admin_message">
+                        Bonjour Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita minima nihil cupiditate, quos porro eum nisi aliquam nulla tempore unde commodi earum doloremque! Omnis fuga beatae eligendi suscipit esse.
+                    </div>
                 </div>
             </div>
 
-            <div class="user_message_conteneur">
-                <div class="user_message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil neque, exercitationem veniam aspernatur sunt, consequuntur architecto distinctio cumque porro placeat voluptatum dolores quod error voluptatem nostrum rerum nemo fuga quis! 
+            <div id="input_conteneur">
+
+                <input type="text" placeholder="Entrez votre message" id="input_chat">
+
+                <div id="send_button">
+                    <img src="./static/image/send.png" alt="send" width="24px" height="24px">
                 </div>
-                <img src="../static/image/sissi.png" width="48px" height="48px" class="user_pic">
             </div>
+            
+            <input type="hidden" value="<?php echo $_SESSION['profil_pic']; ?>" id="user_pic_src">
+            <script src="./static/script/chat.js"></script>
 
         </div>
-        <div id="input_conteneur">
 
-            <input type="text" placeholder="Entrez votre message" id="input_chat">
-
-            <div id="send_button">
-                <img src="../static/image/send.png" alt="send" width="24px" height="24px">
-            </div>
+        <div id="btn_pop_up">
+            <img src="./static/image/admin.png" width="48px" height="48px"/>
         </div>
-
     </div>
 
 
     <style>
+        #chat_all{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            flex: 1;   
+            z-index: 990;
+
+        }
+
+        #btn_pop_up{
+            z-index: 999;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        #btn_pop_up img{
+            width: 50px;
+            height: 50px;
+
+            background-color: white;
+            border-radius: 50%;
+            padding: 7px;
+            cursor: pointer;
+
+            -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+            box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
+        }
+
+        #btn_pop_up img:hover{
+            -webkit-box-shadow: 5px 5px 36px 9px #2fd4ad1f; 
+            box-shadow: 5px 5px 36px 9px #2fd4ae1f; 
+            background-color: #2fd4ad09;
+        }
+
         #chat_conteneur{
             background: #FEFEFE;
             box-shadow: 0 0px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
             border-radius: 7px;
 
-            width: 30%;
-            height: 70%;
+            width: 400px;
+            height: 500px;
 
             position: absolute;
-            bottom: 50px;
-            right: 50px;
+
+            bottom: 80px;
+            right: 0px;
+
             font-size: 30px;
 
             display: flex;
             flex-direction: column;
+
+            display: none;
+
+            animation: entring ease-in 0.4s;
+            
+        }
+
+        @keyframes entring{
+            0%{
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+            }
         }
 
         #header_conteneur{
@@ -79,6 +124,14 @@
 
         #quit_chat{
             cursor: pointer;
+            border-radius: 50%;
+
+            padding: 5px;
+
+        }
+        #quit_chat:hover{
+            border-radius: 50%;
+            background-color: #f0f0f0;
         }
 
         #message_conteneur{
@@ -172,5 +225,32 @@
         var objDiv = document.getElementById("message_conteneur");
         objDiv.scrollTop = objDiv.scrollHeight; 
     </script>
-</body>
-</html>
+
+    <script>
+        var quit_btn = document.getElementById('quit_chat'),
+            launch_btn = document.getElementById('btn_pop_up'),
+            chat_conteneur = document.getElementById('chat_conteneur');
+
+        var displayed = false;
+
+        launch_btn.onclick = ()=>{
+            if (displayed) {
+                chat_conteneur.style.display = 'flex';
+                
+            } 
+            else{
+                chat_conteneur.style.display = 'none';
+
+            }
+            displayed = !displayed;
+
+        }
+
+        quit_btn.onclick = ()=>{
+            if (!displayed) {
+                chat_conteneur.style.display = 'none';
+                
+            } 
+            displayed = false;
+        }
+    </script>

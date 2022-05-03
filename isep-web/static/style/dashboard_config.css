@@ -2,6 +2,8 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
+
 }
 
 #window{
@@ -87,12 +89,13 @@ main{
     display: flex;
     flex-direction: column;
     flex: 1;
+
 }
 
 @keyframes apparationContenu{
     0%{
         opacity: 0;
-        transform: translate(0%, -20%);
+        transform: translate(0%, 20%);
     }
     100%{
         opacity: 1;
@@ -130,115 +133,97 @@ main{
 }
 
 /*-----*/
-
-#valeur_inst{
+#config_db, #config_lumi{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-}
-
-
-.zone_dash{
-    border-radius: 5px;
-
-    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
-    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098);
-    background-color: white;
-
-    padding: 15px;
-    width: 200px;
-
-    opacity: 0.9;
-}
-
-.zone_dash h1{
-    font-family: Exo-Regular;
-    margin: 5px;
-    font-size: 30px;
-
-}
-
-.zone_dash p{
-    font-family: Lato;
-    text-align: right;
-    text-decoration: underline;
-    margin: 0px;
-    font-size: 20px;
-}
-
-/*----------------------------*/
-#graph_screen{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    flex: 1;
-}
-
-#graph_interface{
-    display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+}
+
+#config_lumi{
+    margin-top: 80px;
+
+}
+#config_db h1, #config_lumi h1{
+    font-family: Exo-Regular;
+    color: #2fd4ae;
+    padding-left: 40px;
+    margin-bottom: 40px;
+    margin-top: 8px;   
+}
+
+#config_db>div{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
 
     -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
-    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098);
-    padding: 20px;
-
-    background-color: white;
+    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
     border-radius: 7px;
-
-}
-
-#graph_interface h2{
-    font-family: Exo-Regular;
-    margin: 5px;
-    font-size: 30px;
-}
-
-.btn_grandeur{
-    border-radius: 5px;
-    border: #2fd4ae 1px solid;
-
-    box-shadow: 0 0 15px 1px #2fd4ad22;
     background-color: white;
+}
+
+.db_btn{
+    font-family: Lato;
+    font-size: 30px;
 
     padding: 15px;
-    width: 200px;
+    margin: 10px;
+    border-radius: 7px;
+}
 
-    font-family: Lato;
-    margin: 5px;
-    font-size: 20px;
-
-    opacity: 0.9;  
-
+.db_btn:hover{
+    background-color: #e6e6e6;
+    color: #222;
     cursor: pointer;
 }
-
-#selected_grandeur{
+#selected_db_btn{
     background-color: #2fd4ae;
     color: white;
-    opacity: 1;
 }
 
-.btn_grandeur:hover, #selected_grandeur:hover{
-    opacity: 0.4;
-}
+#bar_lumi{
+    display: flex;
+    width: 80%;
+    height: 20px;
+    justify-content: center;
 
-#graph_interface hr{
-    width: 300px;
-    opacity: 0.3;
-}
+    align-items: center;
 
-#graph{
-    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
-    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098);
+
+    /*-webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
     border-radius: 7px;
-    background-color: white;
-    padding: 10px;
+    background-color: white;*/
+    
 }
 
+#bar_lumi>div{
+    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098);    
+    background-color: white;
+
+    width: 80px;
+    height: 40px;
+    margin: 20px;
+
+    border-radius: 10px;
+}
+
+#bar_lumi>span{
+    font-size: 80px;
+    margin: 20px;
+    color: #2fd4ae;
+
+}
+
+#bar_lumi>.colored{
+    background-color: #2fd4ae;
+    -webkit-box-shadow: 5px 5px 36px 9px #2fd4ad54; 
+    box-shadow: 5px 5px 36px 9px #2fd4ae54;  
+    
+    cursor: pointer;
+}
 /*=======*/
 
 #deco_pop_down{

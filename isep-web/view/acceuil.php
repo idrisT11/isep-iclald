@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/dashboard.css">
+    <link rel="stylesheet" href="./static/style/acceuil.css">
     <link rel="stylesheet" href="./static/fonts/font.css">
+    <link rel="stylesheet" href="./static/fonts/chat.css">
 
-    <title>DashBoard</title>
+    <title>Acceuil</title>
 </head>
 <body>
     <div id="window">
@@ -38,7 +39,7 @@
             
             <div id="header">
                 <div id="header_title">
-                    <h1>DashBoard</h1> 
+                    <h1>Acceuil</h1> 
                     <p>Samedi 30 avril 2022</p> 
                 </div>
 
@@ -64,56 +65,23 @@
             <section id="content">
                 <div id="content_header">
                     <h1 id="title_content">
-                        Valeurs concernant la salle <?php echo $_SESSION['salle']?> :
+                        Bienvenue <?php echo $_SESSION['nom'].' '.$_SESSION['prenom']?> :
                     </h1>
 
-                    <a href="./dash?config" id="configure_link">
+                    <a href="#" id="configure_link">
                         Configuration ➽
                     </a>
                 </div>
 
 
-                <div id="valeur_inst">
-                    <div class="zone_dash">
-                        <h1>Temperature ambiante</h1>
-                        <p id="tmp_instant">27.2°C</p>
-                    </div>
+                <?php include(__DIR__ . "./chat.html"); ?>
 
-                    <div class="zone_dash">
-                        <h1>Niveau sonore</h1>
-                        <p id="snr_instant">65 dB</p>
-                    </div>
-
-                    <div class="zone_dash">
-                        <h1>Niveau d'humidité</h1>
-                        <p id="hmd_instant">35%</p>
-                    </div>
-
-                    <div class="zone_dash">
-                        <h1>Battement Cardiaque</h1>
-                        <p id="crd_instant">80bpm</p>
-                    </div>
-                </div>
-
-
-                <div id="graph_screen">
-                    <div id=graph_interface>
-                        <h2>Selectionnez une grandeur :</h2>
-
-                        <button id="selected_grandeur" class="btn_grandeur" value="tmp">Temperature</button>
-                        <hr>
-                        <button class="btn_grandeur" value="hmd">humidité</button>
-                        <hr>
-                        <button class="btn_grandeur" value="snr">Niveau Sonore</button>
-                    </div>
-
-                    <canvas id="graph" style="width:100%;max-width:600px; height:100%;max-height:300px; ">
-
-                    </canvas>
-                </div>
 
             </section>
         </main>
+
+            
+
     </div>
 
     <script>
@@ -132,9 +100,24 @@
         }
     </script>
 
-    <script src="./static/script/dash.js"></script>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-    </script> 
+    <script>
+        var btn = document.getElementById('nom_btn'),
+            pop_down = document.getElementById('deco_pop_down');
+        var displayed = false;
+        btn.onclick = ()=>{
+            if (displayed) {
+                pop_down.style.display = 'none';
+                
+            } else {
+                pop_down.style.display = 'flex';
+            }
+            displayed = !displayed;
+            console.log(displayed);
+        }
+    </script>
+
+    <script src="./static/script/chat.js"></script>
+    <script src="./static/script/acceuil.js"></script>
+
 </body>
 </html>

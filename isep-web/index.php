@@ -38,6 +38,12 @@
      
     }
 
+
+    else if (preg_match('/\/isep-web\/map/i' , $request)) {
+        require __DIR__ . '/control/map.php';
+     
+    }
+
     else if ($request == $origin . '') {
         require __DIR__ . '/control/acceuil.php';
     }

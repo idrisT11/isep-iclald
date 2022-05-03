@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/dashboard.css">
+    <link rel="stylesheet" href="./static/style/dashboard_config.css">
     <link rel="stylesheet" href="./static/fonts/font.css">
 
     <title>DashBoard</title>
@@ -64,52 +64,41 @@
             <section id="content">
                 <div id="content_header">
                     <h1 id="title_content">
-                        Valeurs concernant la salle <?php echo $_SESSION['salle']?> :
+                        Configurations de la <em> salle <?php echo $_SESSION['salle']?> </em> :
                     </h1>
 
-                    <a href="./dash?config" id="configure_link">
-                        Configuration ➽
+                    <a href="./dash" id="configure_link">
+                        Retour
                     </a>
                 </div>
 
 
-                <div id="valeur_inst">
-                    <div class="zone_dash">
-                        <h1>Temperature ambiante</h1>
-                        <p id="tmp_instant">27.2°C</p>
-                    </div>
+                <div id="config_db">
+                    <h1>Configurer le seuil de detection sonore :</h1>
 
-                    <div class="zone_dash">
-                        <h1>Niveau sonore</h1>
-                        <p id="snr_instant">65 dB</p>
-                    </div>
-
-                    <div class="zone_dash">
-                        <h1>Niveau d'humidité</h1>
-                        <p id="hmd_instant">35%</p>
-                    </div>
-
-                    <div class="zone_dash">
-                        <h1>Battement Cardiaque</h1>
-                        <p id="crd_instant">80bpm</p>
+                    <div>
+                        <div class="db_btn" id="selected_db_btn">68 dB</div>
+                        <div class="db_btn">74 dB</div>
+                        <div class="db_btn">80 dB</div>
                     </div>
                 </div>
 
 
-                <div id="graph_screen">
-                    <div id=graph_interface>
-                        <h2>Selectionnez une grandeur :</h2>
+                <div id="config_lumi">
+                <h1>Configurer la luminosité de l'écran :</h1>
+                    <div id="bar_lumi">
+                        <span>❰</span>
+                        <div class="colored" class="lumi_btn"></div>
+                        <div class="colored" class="lumi_btn"></div>
+                        <div class="colored" class="lumi_btn"></div>
+                        <div class="lumi_btn"></div>
 
-                        <button id="selected_grandeur" class="btn_grandeur" value="tmp">Temperature</button>
-                        <hr>
-                        <button class="btn_grandeur" value="hmd">humidité</button>
-                        <hr>
-                        <button class="btn_grandeur" value="snr">Niveau Sonore</button>
+                        <div class="lumi_btn"></div>
+                        <div class="lumi_btn"></div>
+                        <div class="lumi_btn"></div>
+                        <div class="lumi_btn"></div>
+                        <span>❱</span>
                     </div>
-
-                    <canvas id="graph" style="width:100%;max-width:600px; height:100%;max-height:300px; ">
-
-                    </canvas>
                 </div>
 
             </section>

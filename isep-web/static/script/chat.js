@@ -43,7 +43,6 @@ window.onload = ()=>{
               console.log(this.responseText);
             }
         };
-        console.log(content);
         xhttp.open("GET", "./isep-web/quick_message?action=write&content="+content, true);
         xhttp.send();
     }
