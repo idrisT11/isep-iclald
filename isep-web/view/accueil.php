@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/acceuil.css">
+    <link rel="stylesheet" href="./static/style/accueil.css">
     <link rel="stylesheet" href="./static/fonts/font.css">
     <link rel="stylesheet" href="./static/fonts/chat.css">
 
@@ -40,7 +40,7 @@
             
             <div id="header">
                 <div id="header_title">
-                    <h1>Acceuil</h1> 
+                    <h1>Accueil</h1> 
                     <p>Samedi 30 avril 2022</p> 
                 </div>
 
