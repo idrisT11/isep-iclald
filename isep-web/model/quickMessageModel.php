@@ -61,7 +61,7 @@
 
 
         if($connexion->connect_error){
-            die('Erreur : ' .$conn->connect_error);
+            die('Erreur : ' .$connexion->connect_error);
         }
 
         return $connexion;
