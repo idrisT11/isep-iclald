@@ -17,6 +17,9 @@
             $_SESSION['nom'] = get_from_user($db_connexion, $email, 'NOM');
             $_SESSION['prenom'] = get_from_user($db_connexion, $email, 'PRENOM');
             $_SESSION['salle'] = get_from_user($db_connexion, $email, 'SALLE');
+            $_SESSION['role'] = get_from_user($db_connexion, $email, 'ROLE');
+
+            update_dernier_acces($db_connexion, $email);
 
             header('Location: ./'); die();
             //include(__DIR__ . "\..\\view\\page-acceuil.php");
@@ -29,7 +32,9 @@
     }
 
     else{
-        include(__DIR__ . "/../view/connexionView.html");
+        //include(__DIR__ . "/../view/connexionView.html");
+
+        include(__DIR__ . "/../view/authView.html");
 
     }
 

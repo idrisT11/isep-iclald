@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/dashboard.css">
+    <link rel="stylesheet" href="./static/style/forume_post.css">
     <link rel="stylesheet" href="./static/fonts/font.css">
 
-    <title>DashBoard</title>
+    <title>Forum</title>
 </head>
 <body>
     <div id="window">
@@ -40,7 +40,7 @@
             
             <div id="header">
                 <div id="header_title">
-                    <h1>DashBoard</h1> 
+                    <h1>Nouveau Topic</h1> 
                     <p>Samedi 30 avril 2022</p> 
                 </div>
 
@@ -50,59 +50,49 @@
             <section id="content">
                 <div id="content_header">
                     <h1 id="title_content">
-                        Valeurs concernant la salle <?php echo $_SESSION['salle']?> :
+                        Créer un poste pour ouvrir un nouveau topic :
                     </h1>
 
-                    <a href="./dash?config" id="configure_link">
-                        Configuration ➽
+                    <a href="./forum" id="configure_link" style="font-weight: bold;">
+                        retour ➽
                     </a>
+
                 </div>
 
+                <form id="forum_screen" method="POST" action="./forum?new_topic">
 
-                <div id="valeur_inst">
-                    <div class="zone_dash">
-                        <h1>Temperature ambiante</h1>
-                        <p id="tmp_instant">27.2°C</p>
+                    <div>
+                        <h2>Nom du Topic</h2>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <h2>Type de question</h2>
+                        <select name="type" onChange="combo(this, 'theinput')">
+                            <option>Problème Technique</option>
+                            <option>Problème d'authentification</option>
+                            <option>Question générale sur le produit</option>
+                            <option>Autre</option>
+                        </select> 
                     </div>
 
-                    <div class="zone_dash">
-                        <h1>Niveau sonore</h1>
-                        <p id="snr_instant">65 dB</p>
+                    <div>
+                        <h2>Contenu :</h2>
+                        <textarea name="content" id="content"></textarea>
                     </div>
 
-                    <div class="zone_dash">
-                        <h1>Niveau d'humidité</h1>
-                        <p id="hmd_instant">35%</p>
+                    <div id="footer_form">
+                        <input type="submit" value="Envoyer" id="submit">
+
                     </div>
+                </form>
 
-                    <div class="zone_dash">
-                        <h1>Battement Cardiaque</h1>
-                        <p id="crd_instant">80bpm</p>
-                    </div>
-                </div>
-
-
-                <div id="graph_screen">
-                    <div id=graph_interface>
-                        <h2>Selectionnez une grandeur :</h2>
-
-                        <button id="selected_grandeur" class="btn_grandeur" value="tmp">Temperature</button>
-                        <hr>
-                        <button class="btn_grandeur" value="hmd">humidité</button>
-                        <hr>
-                        <button class="btn_grandeur" value="snr">Niveau Sonore</button>
-                    </div>
-
-                    <canvas id="graph" style="width:100%;max-width:600px; height:100%;max-height:300px; ">
-
-                    </canvas>
-                </div>
 
             </section>
         </main>
     </div>
 
     <script>
+        //PopDown profil
         var btn = document.getElementById('nom_btn'),
             pop_down = document.getElementById('deco_pop_down');
         var displayed = false;
@@ -114,13 +104,10 @@
                 pop_down.style.display = 'flex';
             }
             displayed = !displayed;
-            console.log(displayed);
         }
+
     </script>
 
-    <script src="./static/script/dash.js"></script>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-    </script> 
+
 </body>
 </html>

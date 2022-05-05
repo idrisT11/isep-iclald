@@ -51,6 +51,13 @@
         return $value;
     }
 
+    function update_dernier_acces($db_connexion, $email){
+        $request = $db_connexion->prepare("UPDATE users SET DERNIER_ACCES = current_timestamp()  WHERE EMAIL = ?");
+        
+        $request->bind_param("s", $email);
+        $request->execute();
+    }
+
     function db_login(){
         $servername = 'localhost';
         $sql_username = 'root';

@@ -12,10 +12,16 @@
     //If the user give a token_user, we shall base on it to identify the profil
     if (isset($_GET['token_user'])) 
     {
+        $email = $_SESSION['email'];
+        $current_token_user = get_token_from_email($db_connexion, $email);
+
         $token_user = $_GET['token_user'];
+
 
         if (does_token_exit($db_connexion, $token_user)) 
         {
+            $user = get_user_from_token($db_connexion, $token_user);
+
             include(__DIR__ . "/../view/page-profil.php");
         }
 
@@ -31,6 +37,9 @@
         $email = $_SESSION['email'];
         
         $token_user = get_token_from_email($db_connexion, $email);
+        $current_token_user = $token_user;//hhmmmm
+
+        $user = get_user_from_token($db_connexion, $token_user);
 
 
         include(__DIR__ . "/../view/page-profil.php");

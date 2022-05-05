@@ -9,8 +9,22 @@
         require __DIR__ . '/control/connexion.php';
     }
 
+    else if ($request == $origin . 'deconnexion') {
+        require __DIR__ . '/control/deconnexion.php';
+    }
+
     else if ($request == $origin . 'register') {
         require __DIR__ . '/control/register.php';
+    }
+
+    else if (preg_match('/\/isep-web\/admin/i' , $request)) {
+        require __DIR__ . '/control/manage_user.php';
+     
+    }
+
+    else if (preg_match('/\/isep-web\/add-user/i' , $request)) {
+        require __DIR__ . '/control/add_user.php';
+     
     }
 
     else if (preg_match('/\/isep-web\/verify/i' , $request)) {
@@ -28,8 +42,17 @@
      
     }
 
+    elseif (preg_match('/\/profils-search/i' , $request)) {
+        require __DIR__ . '/control/profil_search.php';
+    }
+
     else if (preg_match('/\/isep-web\/profil/i' , $request)) {
         require __DIR__ . '/control/profil.php';
+     
+    }
+
+    else if (preg_match('/\/isep-web\/forum/i' , $request)) {
+        require __DIR__ . '/control/forum.php';
      
     }
 
@@ -43,6 +66,7 @@
         require __DIR__ . '/control/map.php';
      
     }
+
 
     else if ($request == $origin . '') {
         require __DIR__ . '/control/acceuil.php';
