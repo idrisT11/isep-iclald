@@ -11,16 +11,16 @@
 <body>
 	<header id="head">
 		<p>
-			<a href="Page d'accueil"><img src=".\IM.png" alt="Home"></a>
+			<a href="Page d'accueil"><img src=".\static\image\IM.png" alt="Home"></a>
 		</p>
 		
 		<figure >
 			<form action="changeProfilPic" method="POST" enctype="multipart/form-data" id="formImage">
 				<label for="picInput">
-						<img src=" <?php echo $_SESSION['profil_pic']; ?> " alt="Photo de profil" id="photo">
+						<img src=" <?= get_profil_pic($user['TOKEN_USER']) ?> " alt="Photo de profil" id="photo">
                         <input type="file" name="picInput" id="picInput" style="display: none;">
                 </label>
-				<figcaption>Jean de lafotaine</figcaption>
+				<figcaption> <?= $user['NOM'].' '.$user['PRENOM'] ?> </figcaption>
 				<label for="picInput" style="text-decoration: underline">
 					Modifier la photo
 				</label>
@@ -42,35 +42,41 @@
 			<div id="perso">
 				<h4>Informarions détaillées</h4>
 				<h5>Genre</h5>
-				<p class="type">Homme</p>
+				<p class="type"><?= $user['GENRE'] ?> </p>
 				<h5>Nom</h5>
-				<p class="type">de lafontaine</p>
+				<p class="type"><?= $user['NOM'] ?></p>
 				<h5>Prénom</h5>
-				<p class="type">Jean</p>
+				<p class="type"><?= $user['PRENOM'] ?></p>
 				<h5>Date de naisance</h5>
-				<p class="type">10/10/1973</p>
+				<p class="type"><?= $user['DATE_NAISSANCE'] ?></p>
 				<h5>Mail</h5>
-				<p class="type">macarenas@gmail.com</p>
+				<p class="type"><?= $user['EMAIL'] ?></p>
 				<h5>Ville</h5>
-				<p class="type">Paris</p>
-				<h5>Secteur</h5>
-				<p class="type">Gestion financière</p>
+				<p class="type"><?= $user['VILLE'] ?></p>
+				<h5>Salle</h5>
+				<p class="type"><?= $user['SALLE'] ?></p>
 			</div>
 
 			<div id="autres">
 				<h4>Divers</h4>	
 				<h5>Taille</h5>
-				<p class="type">190 cm</p>
+				<p class="type"><?= $user['TAILLE'] ?> cm</p>
 				<h5>Poids</h5>
-				<p class="type">84 kg</p>
+				<p class="type"><?= $user['POID'] ?> kg</p>
 		
 				<h4>Information connexion</h4>
 				<h5>Premier accès au site</h5>
-				<p class="type">le 05/12/2021</p>
+				<p class="type"><?= $user['PREMIER_ACCES'] ?></p>
 				<h5>Dernière connexion</h5>
-				<p class="type">à l'instant</p>
+				<p class="type"><?= $user['DERNIER_ACCES'] ?></p>
 				
-				<button id="modif">Modifier le profil</button>
+				<?php
+				if ($current_token_user == $token_user or $_SESSION['role'] == 2 ) {
+					?>
+					<button id="modif">Modifier le profil</button>
+					<?php
+				}
+				?>
 			</div>
 
 

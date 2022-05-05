@@ -48,6 +48,8 @@ main{
     background-color: #f6ffff;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #header{
@@ -86,13 +88,15 @@ main{
     animation: apparationContenu 0.5s linear;
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex: 1;
+
 }
 
 @keyframes apparationContenu{
     0%{
         opacity: 0;
-        transform: translate(0%, -20%);
+        transform: translate(-20%, 0%);
     }
     100%{
         opacity: 1;
@@ -103,7 +107,10 @@ main{
 
 #content_header{
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
+    width: 70%;
+
 }
 
 #title_content{
@@ -131,42 +138,60 @@ main{
 
 /*-----*/
 
-#recherche{
+#forum_screen{
+    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
+    border-radius: 7px;
+    background-color: white;
+    padding: 20px;
     display: flex;
-    width: 80%;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
-#recherche #recherche_input{
-    border: none;
-    border-radius: 7px;
-    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
-    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
-    flex: 10;
+#forum_screen textarea{
+    width: 400px;
+    height: 120px;
+    border-radius: 5px;
+    border: #2fd4ae 1px solid;
 
-    font-size: 20px;
-    padding: 10px;
-
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-#recherche #recherche_btn{
-    border: none;
-    border-radius: 7px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-
-    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
-    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
-    flex: 1; 
-
-    font-size: 15px;
-    font-family: Lato;
-    text-align: center;
+    margin: 10px;
     padding: 5px;
+    font-family: Lato;
+    font-size: 15px;
+}
 
+#forum_screen input, #forum_screen select{
+    border-radius: 5px;
+    border: #2fd4ae 1px solid;
+
+    margin: 10px;
+    padding: 5px;
+    font-family: Lato;
+    font-size: 15px; 
+
+
+}
+
+#forum_screen h2{
+    font-family: Exo-Regular;
+    color: #2fd4ae;
+    margin: 8px;
+}
+
+#footer_form{
+    text-align: right;
+}
+
+#submit{
     background-color: #2fd4ae;
     color: white;
+    border-radius: 7px;
+    font-family: Exo-Regular;
+    font-size: 25px;
+
+    border: none;
 }
 
 /*=======*/

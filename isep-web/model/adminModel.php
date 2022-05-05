@@ -21,31 +21,16 @@
 
     }
 
-    function get_user_from_token($db_connexion, $token){
-        $request = $db_connexion->prepare("SELECT * FROM users WHERE TOKEN_USER = ?");
+    function get_all_users($db_connexion){
+        $request = $db_connexion->prepare("SELECT * FROM users");
         
-        $request->bind_param("s", $token);
         $request->execute();
         $result = $request->get_result(); 
 
-        $row = $result->fetch_assoc();
+        $row = $result->fetch_all(MYSQLI_ASSOC);
 
         return $row;
     }
-
-    function get_token_from_email($db_connexion, $email){
-        $request = $db_connexion->prepare("SELECT * FROM users WHERE EMAIL = ?");
-        
-        $request->bind_param("s", $email);
-        $request->execute();
-        $result = $request->get_result(); 
-
-        $row = $result->fetch_assoc();
-        $email = $row["TOKEN_USER"];
-
-        return $email;
-    }
-
 
 
     function get_profil_pic($token){
@@ -58,6 +43,26 @@
         }
     }
 
+
+    function add_user($db_connexion, $nom, $prenom, $email, $role, $genre, $salle, $datenaissance, $ville, $taille, $poid)
+    {
+        $token = hash('sha256', $email);
+        $cmd = "INSERT INTO `users`(`NOM`, `PRENOM`, `EMAIL`, `TOKEN_USER`, `SALLE`, `ROLE`, `GENRE`, `DATE_NAISSANCE`, `VILLE`, `TAILLE`, `POID`) 
+        VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        $request = $db_connexion->prepare($cmd);
+        $request->bind_param("sssssssssss", $nom, $prenom, $email, $token, $salle,  $role, $genre, $datenaissance, $ville, $taille, $poid);
+        $request->execute();
+    }
+
+    function delete_user($db_connexion, $token)
+    {
+        $request = $db_connexion->prepare("DELETE FROM `users` WHERE TOKEN_USER = ?");
+        $request->bind_param("s", $token);
+        $request->execute();
+    }
+
+    
+
     function db_login(){
         $servername = 'localhost';
         $sql_username = 'root';
@@ -69,7 +74,7 @@
 
 
         if($connexion->connect_error){
-            die('Erreur : ' .$connexion->connect_error);
+            die('Erreur : ' .$conn->connect_error);
         }
 
         return $connexion;

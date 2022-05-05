@@ -14,6 +14,7 @@
 <body>
     <div id="window">
         <nav>
+            <img src="./static/image/IM.png" width="50px" style="position: absolute">
             <div id="nav_ctn">
 
                 <a href="./" class="nav_link">
@@ -43,23 +44,7 @@
                     <p>Samedi 30 avril 2022</p> 
                 </div>
 
-                <div id="header_profil">
-                    <a href="./profil">
-                        <img src="<?php echo $_SESSION['profil_pic']; ?>" alt="Profil">
-                    </a>
-                    <div id="nom_btn">
-                        <span id="nom_prenom">
-                        <?php echo $_SESSION['nom']. ", " . $_SESSION['prenom'] . "      ▼" ?>
-                        </span>
-                        <div id="deco_pop_down">
-                                <a href="./profil">Mon Profil</a>
-                                <hr/>
-                                <a href="./deconnexion">Deconnexion</a>
-                        </div>
-                    </div>
-
-
-                </div>
+                <?php include(__DIR__ . './_header.php'); ?>
             </div>
 
             <section id="content">
@@ -69,9 +54,17 @@
                     </h1>
 
                     <a href="#" id="configure_link">
-                        Configuration ➽
+                         ➽
                     </a>
                 </div>
+
+                <form method="GET" action="profils-search">
+                    <h1>Vous recherchez quelqu'un ? Allez-y !</h1>
+                    <div id="recherche">
+                        <input type="text" id="recherche_input" name="recherche_input" placeholder="Entrez votre recherche"/>
+                        <input type="submit" id="recherche_btn" value="Rechercher"/>
+                    </div>
+                </form>
 
 
                 <?php include(__DIR__ . "./chat.html"); ?>
