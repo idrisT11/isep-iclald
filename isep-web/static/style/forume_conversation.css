@@ -303,6 +303,7 @@ main{
     justify-content: left;
     align-items: left;
     padding: 5px;
+    flex: 1;
 }
 
 #main_ctn_post h1 {

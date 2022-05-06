@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Exo-Thin";
+    src: url("Exo-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Exo-Regular";
+    src: url("Exo-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Exo-ExtraLight";
+    src: url("Exo-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Exo-Bold";
+    src: url("Exo-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Exo-Light-Italic";
+    src: url("Exo-Light-Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("Lato-Black.ttf");
+}

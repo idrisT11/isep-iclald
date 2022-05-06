@@ -32,6 +32,11 @@
      
     }
 
+    else if (preg_match('/\/isep-web\/contacter/i' , $request)) {
+        require __DIR__ . '/control/contacter.php';
+     
+    }
+
     else if (preg_match('/\/isep-web\/quick_message(.)*/i' , $request)) {
         require __DIR__ . '/control/quick_message.php';
      

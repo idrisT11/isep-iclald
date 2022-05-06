@@ -41,7 +41,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Forum</h1> 
-                    <p>Samedi 30 avril 2022</p> 
+                    <p>Vendredi 6 mai 2022</p> 
                 </div>
 
                 <?php include(__DIR__ . './_header.php'); ?>
@@ -50,7 +50,7 @@
             <section id="content">
                 <div id="content_header">
                     <h1 id="title_content">
-                    TOPIC #2: <em>Pourquoi mon code ne fonctionne pas ?</em>
+                    TOPIC #<?= $topic['ID'] ?>: <em><?= $topic['TITRE'] ?></em>
                     </h1>
 
                     <a href="./forum" id="configure_link" style="font-weight: bold;">
@@ -65,21 +65,21 @@
                     <div id="forum_posts">
                         <div id="main_post">
                             <div id="img_ctn_post">
-                                <img src="<?php echo $_SESSION['profil_pic']; ?>" alt="pic">
+                                <img src="<?= get_profil_pic($topic['AUTHOR_TOKEN']) ?>" alt="pic">
                             </div>
                             <hr>
                             <div id="main_ctn_post">
-                                <h1>  Pourquoi mon code ne fonctionne pas ?</h1>
+                                <h1><?= $topic['TITRE'] ?></h1>
                                 <p>
-                                    J'ai rencotrait un problème récement Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vitae consequatur modi dicta quo in assumenda impedit delectus, magni placeat, dolorum necessitatibus ratione, laudantium soluta dolorem autem similique non vero.
+                                    <?= $topic['CONTENU'] ?>
                                 </p>
                                 <div class="footer_post">
-                                    4 avril 2019, 14h32
+                                    <?= $topic['DATE'] ?>
                                 </div>
                             </div>
                         </div>
 
-                        <form id="response">
+                        <form action="./forum?action=respond&post=<?=$topic['ID']?>" id="response" method="POST">
                             <h2>Ecrire votre réponse ici :</h2>
                             <textarea name="reponse" id="reponse">
 
@@ -88,40 +88,42 @@
                             
                         </form>
 
+
+
                         <h1>Réponses du Topic :</h1>
+
+
+                    <?php
+                        $conversation_array = json_decode($topic['CONVERSATION']);
+                        foreach ($conversation_array as $rep) {
+                           
+                            $pic = get_profil_pic($rep->token_user);
+
+                    ?>
+
+
                         <div class="post">
+
                             <div id="img_ctn_post">
-                                <img src="./static/image/profil_pic/default.png" alt="pic">
+                                <img src="<?= $pic ?>" alt="pic">
                             </div>
                             <hr>
                             <div id="main_ctn_post">
-                                <h1>TAHER Moh </h1>
+                                <h1><?= $rep->nom. ' '. $rep->prenom ?></h1>
                                 <p>
-                                    C'est logique Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vitae consequatur modi dicta quo in assumenda impedit delectus, magni placeat, dolorum necessitatibus ratione, laudantium soluta dolorem autem similique non vero.
+                                <?= $rep->content ?>
                                 </p>
                                 <div class="footer_post">
-                                    10 avril 2019, 15h38
+                                    <?= $rep->date ?>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="post">
-                            <div id="img_ctn_post">
-                                <img src="<?php echo $_SESSION['profil_pic']; ?>" alt="pic">
-                            </div>
-                            <hr>
-                            <div id="main_ctn_post">
-                                <h1>TATACHAK Idris </h1>
-                                <p>
-                                    Merci pou ta réponse ! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vitae consequatur modi dicta quo in assumenda impedit delectus, magni placeat, dolorum necessitatibus ratione, laudantium soluta dolorem autem similique non vero.
-                                </p>
-                                <div class="footer_post">
-                                    10 avril 2019, 16h02
-                                </div>
-                            </div>
 
-                        </div>
+                    <?php } ?>
+
+
                     </div>
                 </div>
 

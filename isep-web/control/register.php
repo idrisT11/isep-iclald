@@ -43,7 +43,10 @@
         //On ajoute la nouvelle demande dans la table des mails envoyer d'inscription
         insert_token($db_connexion, $token_user, $token_rnd);
         
-        //sendConfirmationMail($email, $link);
+
+        sendConfirmationMail($email, $link);
+
+        header('Location: ./connexion');
     }
 
     else{

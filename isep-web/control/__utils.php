@@ -34,6 +34,24 @@
 
         }
     }
+
+    function sendMail($titre, $contenu, $to_email)
+    {
+        $subject = $titre;
+        $body = $contenu;
+        $headers = "From: Health's Fab" . "\r\n" ;
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    
+        
+        if (mail($to_email, $subject, $body, $headers)) {
+            echo "Email successfully sent to $to_email...";
+
+        } 
+        else {
+            echo "Email sending failed...";
+
+        }
+    }
     
 
 ?>

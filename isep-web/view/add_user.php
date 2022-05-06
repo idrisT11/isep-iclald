@@ -41,7 +41,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Nouvel utilisateur</h1> 
-                    <p>Samedi 30 avril 2022</p> 
+                    <p>Vendredi 6 mai 2022</p> 
                 </div>
 
                 <?php include(__DIR__ . './_header.php'); ?>

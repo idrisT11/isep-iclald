@@ -58,6 +58,16 @@
         }
     }
 
+    function update_user($db_connexion, $nom, $prenom, $email, $genre, $salle, $datenaissance, $ville, $taille, $poid)
+    {
+        $token = hash('sha256', $email);
+        $cmd = "UPDATE `users`
+        SET `NOM` = ?, `PRENOM`=?, `EMAIL`=?, `TOKEN_USER`=?, `SALLE`=?,  `GENRE`=?, `DATE_NAISSANCE`=?, `VILLE`=?, `TAILLE`=?, `POID`=?";
+        $request = $db_connexion->prepare($cmd);
+        $request->bind_param("ssssssssss", $nom, $prenom, $email, $token, $salle, $genre, $datenaissance, $ville, $taille, $poid);
+        $request->execute();
+    }
+
     function db_login(){
         $servername = 'localhost';
         $sql_username = 'root';
@@ -69,7 +79,7 @@
 
 
         if($connexion->connect_error){
-            die('Erreur : ' .$connexion->connect_error);
+            die('Erreur : ' .$conn->connect_error);
         }
 
         return $connexion;

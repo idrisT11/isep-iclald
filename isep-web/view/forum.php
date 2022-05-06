@@ -41,7 +41,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Forum</h1> 
-                    <p>Samedi 30 avril 2022</p> 
+                    <p>Vendredi 6 mai 2022</p> 
                 </div>
 
                 <?php include(__DIR__ . './_header.php'); ?>
@@ -61,57 +61,51 @@
 
                 <div id="forum_screen">
 
-                    <div id="recherche">
-                        <input type="text" id="recherche_input" placeholder="Entrez votre recherche"/>
-                        <input type="button" id="recherche_btn" value="Rechercher"/>
-                    </div>
+                    <form id="recherche" action="./forum" method="GET">
+                        <input type="text" name="filtrer" id="recherche_input" placeholder="Entrez votre recherche"/>
+                        <input type="submit" id="recherche_btn" value="Rechercher"/>
+                    </form>
                     
                     <div id="forum_posts">
+
+                    <?php
+                        foreach ($topics as $topic) {
+                            $user_pic = get_profil_pic($topic['AUTHOR_TOKEN']);
+
+                    ?>
                         <div class="post">
                             <div id="img_ctn_post">
-                                <img src="<?php echo $_SESSION['profil_pic']; ?>" alt="pic">
+                                <img src="<?php echo $user_pic; ?>" alt="pic">
                             </div>
                             <hr>
                             <div id="main_ctn_post">
-                                <h1>Pourquoi mon code ne fonctionne pas ?</h1>
+                                <h1><?= $topic['TITRE'] ?></h1>
                                 <p>
-                                    J'ai rencotrait un problème récement Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vitae consequatur modi dicta quo in assumenda impedit delectus, magni placeat, dolorum necessitatibus ratione, laudantium soluta dolorem autem similique non vero.
+                                    <?= $topic['CONTENU'] ?>
                                 </p>
                                 <div class="footer_post">
-                                    <div class="delete_post">
+                                <?php
+                                    if ($_SESSION['role'] == 2) {
+                                ?>
+                                    <a class="delete_post" href="./forum?action=delete&post=<?= $topic['ID'] ?>">
                                         supprimer
-                                    </div>
+                                    </a>
+                                <?php
+                                    }
+                                ?>
 
-                                    <a class="respond_post" href="./forum?post=1">
+                                    <a class="respond_post" href="./forum?post=<?= $topic['ID'] ?>">
                                         Répondre 
                                         <!--<img src="./static/image/R.png" alt="l">-->
                                     </a>
                                 </div>
                             </div>
                         </div>
+                    <?php
+                        }
+                    ?>
 
-                        <div class="post">
-                            <div id="img_ctn_post">
-                                <img src="<?php echo $_SESSION['profil_pic']; ?>" alt="pic">
-                            </div>
-                            <hr>
-                            <div id="main_ctn_post">
-                                <h1>Pourquoi mon code ne fonctionne pas ?</h1>
-                                <p>
-                                    J'ai rencotrait un problème récement Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vitae consequatur modi dicta quo in assumenda impedit delectus, magni placeat, dolorum necessitatibus ratione, laudantium soluta dolorem autem similique non vero.
-                                </p>
-                                <div class="footer_post">
-                                    <div class="delete_post">
-                                        supprimer
-                                    </div>
 
-                                    <a class="respond_post">
-                                        Répondre 
-                                        <!--<img src="./static/image/R.png" alt="l">-->
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 

@@ -43,7 +43,7 @@
         }
     }
 
-
+    //Ces deux fonctions devraient etre dans le modèle du profil
     function add_user($db_connexion, $nom, $prenom, $email, $role, $genre, $salle, $datenaissance, $ville, $taille, $poid)
     {
         $token = hash('sha256', $email);

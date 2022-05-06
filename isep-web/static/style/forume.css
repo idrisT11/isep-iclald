@@ -198,10 +198,13 @@ main{
     border-radius: 8px;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    min-height: 174px;
 }
 
 .post hr{
     width: 1px;
+    margin: 15px;
     border: #2fd4ae 1px solid;
     background-color: #2fd4ae;
 }
@@ -213,9 +216,10 @@ main{
 }
 
 #img_ctn_post img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+
 }
 
 #main_ctn_post{
@@ -224,6 +228,8 @@ main{
     justify-content: left;
     align-items: left;
     padding: 5px;
+
+    flex: 1;
 }
 
 #main_ctn_post h1 {

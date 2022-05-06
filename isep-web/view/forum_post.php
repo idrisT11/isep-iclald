@@ -41,7 +41,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Nouveau Topic</h1> 
-                    <p>Samedi 30 avril 2022</p> 
+                    <p>Vendredi 6 mai 2022</p> 
                 </div>
 
                 <?php include(__DIR__ . './_header.php'); ?>
@@ -63,15 +63,15 @@
 
                     <div>
                         <h2>Nom du Topic</h2>
-                        <input type="text">
+                        <input type="text" name="titre">
                     </div>
                     <div>
                         <h2>Type de question</h2>
                         <select name="type" onChange="combo(this, 'theinput')">
-                            <option>Problème Technique</option>
-                            <option>Problème d'authentification</option>
-                            <option>Question générale sur le produit</option>
-                            <option>Autre</option>
+                            <option value="Problème Technique">Problème Technique</option>
+                            <option value="Problème d'authentification">Problème d'authentification</option>
+                            <option value="Question générale sur le produit">Question générale sur le produit</option>
+                            <option value="Autre">Autre</option>
                         </select> 
                     </div>
 

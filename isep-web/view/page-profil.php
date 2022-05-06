@@ -73,7 +73,9 @@
 				<?php
 				if ($current_token_user == $token_user or $_SESSION['role'] == 2 ) {
 					?>
-					<button id="modif">Modifier le profil</button>
+					<a href="./profil?modif=true&token_user=<?= $user['TOKEN_USER'] ?>">
+					<button id="modif" >Modifier le profil</button>
+					</a>
 					<?php
 				}
 				?>
