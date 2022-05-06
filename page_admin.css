@@ -1,142 +1,105 @@
 
-body{
+body
+{
     /*background-image: url("blurry-gradient-haikei.svg");
     background-repeat: no-repeat;
     background-size: 100%;*/
     background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
-
-
 }
-#headerz{
+
+
+#header
+{
+    top: 0;
+    flex-direction: row;
+    align-items: center;
     display: flex;
-    margin-top: 15px;
-
+    justify-content: space-around;
+    background: #83947e;
 }
 
-/*noinspection CssUnknownTarget*/
-#dov{
+#logo
+{
+    display: flex;
+}
+
+#navigateur
+{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    /*background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 11px;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    backdrop-filter: blur(12px);*/
-    padding: 10px;
-
-    background-image: url("GRANDE\ VAGUE.PNG");
-    background-size: 100% ;
-    background-repeat: no-repeat;
-
-}
-#vague{
-    height: 80PX;
-    background-image: url("VAGUOUSSE.PNG");
-    background-size: 100% ;
-    background-repeat: no-repeat;
-    margin-top:0PX;
-}
-header div{
-    display: flex;
-    flex: 1;
-}
-header nav{
-    display: flex;
-    flex: 2;
-    align-items: baseline;
-}
-header nav ul{
-    
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-}
-#cbtn{
-    display: flex;
-    justify-content: end;
-    margin-right: 10px;
-}
-#im{
-    margin-top: -100px;
+    justify-content: space-between;
 }
 
-header nav ul li{
-    margin-left: 7px;
-    margin-top: -6px;
-    float: left;
-    width: 100%;
-    text-align: left;
-    position: relative;
-}
-nav a{
-
+header nav ul 
+{
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
-    text-decoration: none;
+}
+
+header nav ul li 
+{
+    list-style-type: none;
+    overflow: -moz-scrollbars-horizontal;
+}
+
+.style
+{
+    padding: 5px ;
+}
+
+
+.navi
+{
     color: white;
-    border-bottom: 2px solid transparent;
-    padding: 10px 0px;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
 }
 
-nav a:hover{
-    color: rgb(0, 0, 0);
+#recherche
+{
+    justify-content: left;
+
 }
 
-
-}
-
-    
-}
-#div{
-    padding: 10px;
-    width: 600px;
-    height: 125px;
-    border: solid 1px black;
-    position: sticky;
-    top: 0px;
-    font-size: 12px;
-    backdrop-filter: blur(16px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);
-    border-radius: 7px;
-    background :url("VAGUE.PNG");
-    background-repeat: no-repeat;
-    background-size: 102%;
-    
+a:hover
+{
+    color: #0f231a;
 }
 
 
-h2{
+
+h2
+{
     text-decoration: underline;
     font-size: 15px;
 }
 
 
-#div4{
-    margin-left: 3px;
-}
-#connexionbtn{
-    width: 100px;
-    cursor: pointer;
-}
-
-
-#recherche{
+#recherche
+{
     size: 70%;
     padding: 15px;
     display: flex;
     justify-content: center;
     text-align: justify;
-    
-   
 }
-#hrech{
+
+#hrech
+{
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
-.btn2{
+
+.btn2
+{
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 7px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -148,13 +111,16 @@ h2{
     display: flex;
     flex-direction: row-reverse ;
 }
-#recherchebtn{
+
+#recherchebtn
+{
     cursor: pointer;
 }
 
 
 
-#input{
+#input
+{
     margin-top: 1px;
     border-top: 0px;
     border-left: 0px;
@@ -162,12 +128,12 @@ h2{
     width: 130%;
     background-color: transparent;
 }
-#div9{
-    
+
+#div9
+{    
     gap: 10px 0px;
     display: flex;
     flex-direction: column;
-
 }
 
 #mb
@@ -175,54 +141,78 @@ h2{
     font-size: 20;
 }
 
-#lu
-{
-
-}
-
-
-.user1
-{
-    box-shadow: 1px 2px 2px 1px azure;
-    border: 0.5px black solid;
-    border-radius: 7px;
-    width:50% ;
-    height:100px ;
-
-}
-
-.user2
-{
-    box-shadow: 1px 2px 2px 1px azure;
-    border: 0.5px black solid;
-    border-radius: 7px;
-    width:50% ;
-    height:100px ;
-
-}
-
-.user3
-{
-    box-shadow: 1px 2px 2px 1px azure;
-    border: 0.5px black solid;
-    border-radius: 7px;
-    width:50% ;
-    height:100px ;
-
-}
-
-#page
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 400px;
-    flex-direction: column;
-}
-
 #titre
 {
     text-align: center;
     text-shadow: 1px 1px 1px black;
     color: green;
+}
+
+
+#text
+{
+    margin-top: 5px;
+}
+
+
+#page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    
+    
+}
+
+.user1
+{
+    box-shadow: 1px 2px 2px 1px black;
+    border: 0.5px black solid;
+    border-radius: 7px;
+    width:50% ;
+    height:200px ;
+}
+
+.user2
+{
+    box-shadow: 1px 2px 2px 1px black;
+    border: 0.5px black solid;
+    border-radius: 7px;
+    width:50% ;
+    height:200px ;
+}
+
+.user3
+{
+    box-shadow: 1px 2px 2px 1px black;
+    border: 1px black solid;
+    border-radius: 7px;
+    width:50% ;
+    height:200px ;
+}
+
+
+.image-ronde
+{
+    width : 55px; height : 55px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    margin-left: 6px;
+    margin-top: 7px;
+}
+
+.desc
+{  
+    margin-left: 80px;
+    margin-top: -65px;
+}
+
+.fct
+{
+    margin-left: 450px;
+    margin-top: 60px;
 }
