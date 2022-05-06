@@ -32,7 +32,7 @@ body{
     align-items: center;
     }
 #head2{
-   background-color: #80ff72;
+   background-color: #ca1010;
     border-radius: 11px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     backdrop-filter: blur(12px);
@@ -184,7 +184,7 @@ h2{
     justify-content: space-evenly;
     width: 70%;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 #recherche1{
     size: 100%;
