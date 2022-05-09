@@ -1,0 +1,169 @@
+
+#body{
+
+    margin:0;
+    padding:0;
+    font-family: Avenir, sans-serif;
+
+}
+#container{
+    display: flex;
+    flex-direction: column;
+}
+#header{
+    top: 0;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    background: #83947e;
+
+}
+
+#logo{
+    display: flex;
+
+}
+#navigateur{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+header nav ul li {
+    list-style-type: none;
+    overflow: -moz-scrollbars-horizontal;
+
+}
+
+.style{
+    padding: 5px ;
+
+}
+
+
+.navi{
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+
+
+}
+#recherche{
+    justify-content: left;
+
+}
+
+a:hover{
+    color: #0f231a;
+
+}
+
+.connexion {
+    background-color: rgb(15, 35, 26);
+    border-radius: 7px;
+    box-shadow: 0 8px 6px 2px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 95px;
+    height: 45px;
+
+    border: 0;
+    font-size: 17px;
+    color: rgb(194, 206, 202);
+
+}
+
+
+
+
+#intro{
+    background-image: url("./AdobeStock_151481103-scaled.jpeg");
+    background-repeat: no repeat;
+    height: 750px;
+    width: 1440px;
+    display: flex;
+
+}
+
+#texte1{
+    font-family: Avenir, sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-left: 100px;
+    margin-top: 30px;
+
+
+
+}
+#flou{
+    background: rgba(9, 9, 9, 0.27);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    align-items: end;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    padding: 20px;
+
+}
+
+#suite1{
+    display: flex;
+    background: url("./Capture d’écran 2022-03-31 à 10.06.12.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+
+
+
+}
+
+#textes1{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 660px;
+    width: 530px;
+    margin: 10px;
+    color: white;
+
+
+
+}
+#footer{
+    bottom:0;/* on le colle en bas */
+    display: flex;
+    flex-direction:column ;
+    border-top: solid 2px rgba(15,35,26,0.2);
+    background: rgb(131, 148, 126);
+
+
+
+
+}
+
+.textef1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+#textes11{
+    margin-top: 9em;
+
+
+}
+
