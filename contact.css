@@ -1,0 +1,180 @@
+/* le header */
+.mainHeader{
+        
+        height: 206px;
+        background-image: url("GRANDE\ VAGUE.PNG");
+        background-repeat: no-repeat;
+        display: indivne-block;
+        width: 100%;
+        color: white;
+    }
+
+    .img{
+        height: 150px;
+        aspect-ratio: inherit;
+        width: 150px;
+    }
+
+    .mainHeaderRightSide{
+        float: right;
+        width: 1256px;
+        display: inline-block;
+    }
+
+    .menu, .recherche{
+        width: 100%;
+    }
+
+    .recherche{
+        height: 103px;
+        
+    }
+    .inputRecherche{
+        background: transparent;
+        color: white;
+        border-top: 0px;
+        border-right: 0px;
+        border-left: 0px;
+        border-bottom-width: 2px;
+        border-bottom-color: white;
+        border-bottom-style: sodivd;
+        sfont-size: large;
+    }
+
+    .recherche{
+        vertical-align: middle;
+    }
+   
+    .navigation{
+        display: inline-block;
+    }
+
+    .forumDiv, .vosResultatsDiv, .cartePollutionDiv{
+        width: 150px;
+    }
+    .vosResultatsDiv, .cartePollutionDiv, .forumDiv, .nousContacter{
+        float: left;
+        
+        font-size: larger;
+    }
+
+    .nousContacterTitre{
+        text-decoration: underline;
+    }
+
+    .sideProfile{
+        float: right;
+        width: 50%;
+        height: 206px;
+    }
+
+    .leftRightSide{
+        float: left;
+        width: 50%;
+    }
+
+    .imgLaFontaine{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        float: right;
+        padding: 10px;
+    }
+
+    .contentProfile{
+        display: inline-block;
+        
+    }
+
+    .coordonnees{
+        float: left;
+        width: 200px;
+    }
+
+    .profil{
+        text-decoration: underline;
+    }
+
+    .link{
+        text-decoration: none;
+        color: inherit;
+    }
+/* le contenu */
+.container{
+    
+    border-style: solid;
+    border-width: 2px;
+    margin: 5px;
+    border-radius: 9px;
+    width: 30%;
+    display: inline-block;
+}
+
+.select{
+    width: 100%;
+    text-align: center;
+}
+
+.form{
+    padding: 5px;
+    
+}
+.divLeft{
+    float: left;
+    height: 100px;
+    width: 40%;
+    
+}
+
+.divRight{
+    float: right;
+    height: 100%;
+    width: 60%;
+    text-align: right;
+    
+    
+}
+
+.inputEmail, .inputTxt, .inputPb{
+    display: inline-block;
+    margin: 10px;
+    width: 90%;
+    background-color: grey;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: grey;
+    opacity: 60%;
+    color: black;
+    
+    
+}
+
+.labelEmail, .labelPb, .labelTxt{
+    display: inline-block;
+    margin: 10px;
+    width: 90%;
+
+}
+
+.divGeneral{
+    display: inline-block ;
+    width: 100%;
+    height: 100%;
+}
+
+.btnEnvoyer{
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    background-color: lightgreen;
+    color: white;
+    border-radius: 3px;
+}
+
+.titreFormulaire{
+    color: lightgreen;
+}
+
+.Part2{
+    text-align: center;
+}
