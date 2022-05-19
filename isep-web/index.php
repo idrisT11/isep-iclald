@@ -4,7 +4,7 @@
     $request = $_SERVER['REQUEST_URI'];
     $qr = $_SERVER['QUERY_STRING'];
 
-    $origin = ''; 
+    $origin = '/'; 
 
 
     if ($request == $origin . 'connexion') {
@@ -85,10 +85,7 @@
     }
 
     else{
-        echo $request.'<br>';
-        echo $origin . '';
-
-        //http_response_code(404);
+        http_response_code(404);
     }
 
 
