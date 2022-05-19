@@ -88,7 +88,7 @@
         echo $request.'<br>';
         echo $origin . '';
 
-        http_response_code(404);
+        //http_response_code(404);
     }
 
 
