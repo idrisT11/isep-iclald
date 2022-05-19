@@ -1,6 +1,6 @@
 <?php
     echo 55;
-    die();
+
     $request = $_SERVER['REQUEST_URI'];
     $qr = $_SERVER['QUERY_STRING'];
 
@@ -80,10 +80,14 @@
 
 
     else if ($request == $origin . '') {
+        
         require __DIR__ . '/control/acceuil.php';
     }
 
     else{
+        echo $request.'<br>';
+        echo $origin . '';
+
         http_response_code(404);
     }
 
