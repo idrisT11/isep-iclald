@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Profil</title>
-	<link rel="stylesheet" type="text/css" href="/isep-web/static/style/page-profil.css">
-	<link rel="stylesheet" type="text/css" href="/isep-web/static/fonts/font.css">
+	<link rel="stylesheet" type="text/css" href="./static/style/page-profil.css">
+	<link rel="stylesheet" type="text/css" href="./static/fonts/font.css">
 	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 	
 </head>
@@ -28,7 +28,7 @@
 		</figure>
 
 		<div class="formSub">
-            <a type="submit" id="submit" class="submitOff" href="/isep-web/"> RETOUR </a>
+            <a type="submit" id="submit" class="submitOff" href="./"> RETOUR </a>
         </div>
 
 	</header>
