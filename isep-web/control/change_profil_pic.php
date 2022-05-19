@@ -16,7 +16,7 @@
 
         }
         
-        header('Location: /isep-web/profil');
+        header('Location: ./profil');
 
     }
 
