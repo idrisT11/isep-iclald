@@ -1,10 +1,13 @@
 <?php
-
+    echo 55;
+    die();
+    
     $request = $_SERVER['REQUEST_URI'];
     $qr = $_SERVER['QUERY_STRING'];
 
     $origin = '/isep-web/'; 
-    
+
+
     if ($request == $origin . 'connexion') {
         require __DIR__ . '/control/connexion.php';
     }
