@@ -1,5 +1,4 @@
 <?php
-    echo 55;
 
     $request = $_SERVER['REQUEST_URI'];
     $qr = $_SERVER['QUERY_STRING'];
