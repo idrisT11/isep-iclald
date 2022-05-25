@@ -1,6 +1,6 @@
 <?php
 
-    require_once( __DIR__ .  "\..\model\\profilSearchModel.php");
+    require_once( __DIR__ .  "/../model/profilSearchModel.php");
     session_start();
 
     //The user has to been connected to access this page
@@ -39,10 +39,10 @@
     function get_profil_pic($token){
 
         if ( file_exists('./static/image/profil_pic/'.$token.'.png') ) {
-            return '/isep-web/static/image/profil_pic/'.$token.'.png';
+            return '/static/image/profil_pic/'.$token.'.png';
         }
         else{
-            return '/isep-web/static/image/profil_pic/default.png';
+            return '/static/image/profil_pic/default.png';
         }
     }
 ?>

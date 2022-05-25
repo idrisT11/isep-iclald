@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require_once( __DIR__ .  "\password_lib.php");
-    require_once( __DIR__ .  "\..\model\\connexionModel.php");
+    require_once( __DIR__ .  "/password_lib.php");
+    require_once( __DIR__ .  "/../model/connexionModel.php");
 
     //Si les valeurs ne sont pas Set, on affiche la page, sinon on connecte
     if(isset( $_POST['password'] ) && isset($_POST['email'])){
@@ -25,8 +25,8 @@
             //include(__DIR__ . "\..\\view\\page-acceuil.php");
         }
         else{
-            die();
-            header('Location: connexion?irp_error=credential_invalid');
+            $error = "Nom d'utilisateur ou mot de passe Invalid, veuillez réessayer.";
+            include(__DIR__ . "/../view/authView.php");
 
         }
     }
@@ -34,7 +34,7 @@
     else{
         //include(__DIR__ . "/../view/connexionView.html");
 
-        include(__DIR__ . "/../view/authView.html");
+        include(__DIR__ . "/../view/authView.php");
 
     }
 

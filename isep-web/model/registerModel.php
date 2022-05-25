@@ -1,4 +1,5 @@
 <?php
+    require_once( __DIR__ .  "/db_connect.php");
 
     $db_connexion = db_login();
 
@@ -40,24 +41,5 @@
         $request->bind_param("ss", $token_user, $token_rnd);
         $request->execute();
     }
-
-
-    function db_login(){
-        $servername = 'localhost';
-        $sql_username = 'root';
-        $sql_password = '';
-
-        $db_name = 'iclald';
-
-        $connexion = new mysqli($servername, $sql_username, $sql_password, $db_name);
-
-
-        if($connexion->connect_error){
-            die('Erreur : ' .$conn->connect_error);
-        }
-
-        return $connexion;
-    }
-
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+    require_once( __DIR__ .  "/db_connect.php");
 
     $db_connexion = db_login();
 
@@ -46,6 +47,19 @@
         return $email;
     }
 
+    function get_id_from_email($db_connexion, $email){
+        $request = $db_connexion->prepare("SELECT * FROM users WHERE EMAIL = ?");
+        
+        $request->bind_param("s", $email);
+        $request->execute();
+        $result = $request->get_result(); 
+
+        $row = $result->fetch_assoc();
+        $email = $row["ID"];
+
+        return $email;
+    }
+
 
 
     function get_profil_pic($token){
@@ -58,30 +72,16 @@
         }
     }
 
-    function update_user($db_connexion, $nom, $prenom, $email, $genre, $salle, $datenaissance, $ville, $taille, $poid)
+    function update_user($db_connexion, $nom, $prenom, $email, $genre, $salle, $datenaissance, $ville, $taille, $poid, $id)
     {
         $token = hash('sha256', $email);
         $cmd = "UPDATE `users`
-        SET `NOM` = ?, `PRENOM`=?, `EMAIL`=?, `TOKEN_USER`=?, `SALLE`=?,  `GENRE`=?, `DATE_NAISSANCE`=?, `VILLE`=?, `TAILLE`=?, `POID`=?";
+        SET `NOM` = ?, `PRENOM`=?, `EMAIL`=?, `TOKEN_USER`=?, `SALLE`=?,  `GENRE`=?, `DATE_NAISSANCE`=?, `VILLE`=?, `TAILLE`=?, `POID`=?
+        WHERE ID=?";
         $request = $db_connexion->prepare($cmd);
-        $request->bind_param("ssssssssss", $nom, $prenom, $email, $token, $salle, $genre, $datenaissance, $ville, $taille, $poid);
+        $request->bind_param("sssssssssss", $nom, $prenom, $email, $token, $salle, $genre, $datenaissance, $ville, $taille, $poid, $id);
         $request->execute();
     }
 
-    function db_login(){
-        $servername = 'localhost';
-        $sql_username = 'root';
-        $sql_password = '';
 
-        $db_name = 'iclald';
-
-        $connexion = new mysqli($servername, $sql_username, $sql_password, $db_name);
-
-
-        if($connexion->connect_error){
-            die('Erreur : ' .$conn->connect_error);
-        }
-
-        return $connexion;
-    }
 ?>

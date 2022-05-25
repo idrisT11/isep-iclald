@@ -41,6 +41,7 @@
         </div>
 
 
+
     </main>
 
 
@@ -54,76 +55,23 @@
         let emailAllowSubmit = false,
             passwordAllowSubmit = false;
 
-        /*
-        window.onload = ()=>{
-            emailAllowSubmit = email.value != '';
-            passwordAllowSubmit = password.value != '';
-
-            setSubmitButtonOn(emailAllowSubmit && passwordAllowSubmit);
-        }
-
-
-        email.addEventListener('keyup', (e)=>{
-
-            if (e.target.value != '') 
-            {
-                emailAllowSubmit = true;   
-
-                if (emailAllowSubmit && passwordAllowSubmit) 
-                    setSubmitButtonOn(true);
-            }
-            else
-            {
-                emailAllowSubmit = false; 
-                setSubmitButtonOn(false);
-            }
-        });
-
-        password.addEventListener('keyup', (e)=>{
-
-            if (e.target.value != '') 
-            {
-                passwordAllowSubmit = true;   
-
-                if (emailAllowSubmit && passwordAllowSubmit) 
-                    setSubmitButtonOn(true);
-            }
-            else
-            {
-                passwordAllowSubmit = false; 
-                setSubmitButtonOn(false);
-            }
-        });
-
-        submit.addEventListener('click', (e)=>{
-
-            if (emailAllowSubmit && passwordAllowSubmit) 
-            {
-                
-            }
-            else
-                e.preventDefault();
-        });
-
-
-        function setSubmitButtonOn(value) {
-            
-            if (value) 
-            {
-                submit.className = 'submitOn';    
-            }
-            
-            else
-            {
-                submit.className = 'submitOff';
-            }
-        }*/
+       
 
 
     </script>
 
 
     <style>
+        #overlay{
+            background-color: #0008;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+
         body, html{
             margin: 0;
             padding: 0;

@@ -1,6 +1,6 @@
 <?php
 
-    require_once( __DIR__ .  "\..\model\\profilModel.php");
+    require_once( __DIR__ .  "/../model/profilModel.php");
     session_start();
 
     //The user has to been connected to access this page
@@ -34,8 +34,10 @@
             $ville = $_POST['ville'];
             $taille = $_POST['taille'];
             $poid = $_POST['poid'];
-    
-            update_user($db_connexion, $nom, $prenom, $email, $genre, $salle, $datenaissance, $ville, $taille, $poid);
+
+            $id = get_id_from_email($db_connexion, $email);
+
+            update_user($db_connexion, $nom, $prenom, $email, $genre, $salle, $datenaissance, $ville, $taille, $poid, $id);
     
     
             header('Location: ./profil');
