@@ -59,8 +59,8 @@
 
 			<div id="autres">
 				<h4>Divers</h4>	
-				<h5>Taille en cm</h5>
-                <input class="type" type="text" value="<?= $user['TAILLE'] ?>" name="taille">
+				<h5>Taille</h5>
+                <input class="type" type="text" value="<?= $user['TAILLE'] ?>" name="taille" placeholder="cm">
 				<h5>Poids en kg</h5>
                 <input class="type" type="text" value="<?= $user['POID'] ?>" name="poid">
 		
