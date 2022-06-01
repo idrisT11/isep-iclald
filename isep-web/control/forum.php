@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/forumModel.php");
 
     if (isset($_SESSION['connected']) && $_SESSION['connected']) {
@@ -33,7 +35,7 @@
 
                 add_to_conversation($db_connexion, $_GET['post'], $token, $nom, $prenom, $content);
 
-                header('Location: ./forum?post='.$_GET['post']);
+                header('Location: ./forum/post/'.$_GET['post']);
 
             } 
 

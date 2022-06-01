@@ -131,3 +131,15 @@
 
     max-width: 60%;
 }
+
+/*********************************************************************/
+
+.discussion{
+    display: flex;
+    flex-direction: row;
+}
+
+.conversation_element_pic{
+    border-radius: 24px;
+    display: block;
+}

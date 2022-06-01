@@ -177,8 +177,13 @@ main{
     color: #222;
     cursor: pointer;
 }
-#selected_db_btn{
+.selected_db_btn{
     background-color: #2fd4ae;
+    color: white;
+}
+
+.selected_db_btn:hover{
+    background-color: #2fd4ae45;
     color: white;
 }
 
@@ -190,7 +195,7 @@ main{
 
     align-items: center;
 
-
+    
     /*-webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
     box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
     border-radius: 7px;
@@ -208,12 +213,14 @@ main{
     margin: 20px;
 
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #bar_lumi>span{
     font-size: 80px;
     margin: 20px;
     color: #2fd4ae;
+    cursor: pointer;
 
 }
 

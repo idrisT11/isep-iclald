@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/profilPicModel.php");
 
     if(isset($_SESSION['connected']) && $_SESSION['connected'])
@@ -16,7 +17,7 @@
 
         }
         
-        header('Location: ./profil');
+        header('Location: /isep-web/profil');
 
     }
 

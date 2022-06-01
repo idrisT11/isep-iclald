@@ -32,6 +32,16 @@
                 <a href="./map" class="nav_link">
                     <img src="./static/image/map.png" alt="map">
                 </a>
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="./ticket" class="nav_link">
+                        <img src="./static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
+                
                       
             </div>
         </nav>
@@ -41,7 +51,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Contacter un administrateur</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>
@@ -53,7 +63,7 @@
                         Ecrivez un email à l'administrateur
                     </h1>
 
-                    <a href="./forum" id="configure_link" style="font-weight: bold;">
+                    <a href="./" id="configure_link" style="font-weight: bold;">
                         retour ➽
                     </a>
 
@@ -77,7 +87,6 @@
 
                     <div id="footer_form">
                         <input type="submit" value="Envoyer" id="submit">
-
                     </div>
                 </form>
 

@@ -1,0 +1,344 @@
+
+#bod{
+  width: fit-content;
+  margin: 0;
+}
+#navi {
+position: sticky;
+top: -1px;
+}
+
+#nav{
+  width: 4.5%;
+  height: 100%;
+  position: fixed;
+}
+/***********************************************************************/
+.btn{
+  background-color: #2fd4ae;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-family: Exo-Regular;
+  border-radius: 8px;
+  font-size: 17px;
+  -webkit-box-shadow: 5px 5px 36px 9px #2fd4ae1f; 
+  box-shadow: 5px 5px 36px 9px #2fd4ae1f; 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#cnx-btn{
+  display: block;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  margin-right: 30px;
+
+
+  background-color: #2fd4ae;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-family: Exo-Regular;
+  border-radius: 8px;
+  font-size: 17px;
+  -webkit-box-shadow: 5px 5px 36px 9px #2fd4ae1f; 
+  box-shadow: 5px 5px 36px 9px #2fd4ae1f; 
+}
+
+
+
+#imp{
+  width: 100%;
+}
+
+#haut1{
+/*background: url("../image/AMENAGEMENT-OPEN-SPACE-01.jpeg");*/
+background-repeat: no-repeat;
+text-align: center;
+font-family: Exo-Regular;
+animation: fadein 2s;
+-webkit-animation: fadein 2s;
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+
+}
+
+#headr_title > h1{
+    margin-top: 15px;
+    font-size: 20px;
+    animation: apparationContenu 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#info1 > p{
+    font-size: 50px;
+    animation: apparationContenu 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#principal{
+  background-color: #2fd4ae;
+  border-bottom-right-radius: 200px;
+  border-top-left-radius: 200px;
+
+  flex: 1;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+
+#principal-droite{
+  max-width: 580px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #444;
+  background-color: white;
+  padding: 15px;
+
+  border-radius: 15px;
+
+  flex: 1;
+  animation: apparationContenu 0.5s linear;
+  -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.242); 
+  box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.198);
+
+}
+#principal-footer{
+  flex: 3;
+  text-align: center;
+}
+
+#principal-droite>h1{
+  font-size: 20px;
+  flex: 1;
+
+  
+}
+#principal-droite>h2{
+  font-size: 40px;
+  flex: 1;
+
+
+}
+#principal-droite>p{
+  font-family: Lato;
+  flex: 3;
+
+
+}
+
+#principal-gauche{
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  max-width: 480px;
+  clear: both;
+  background: url("../image/the-ben-capteur-co2.jpeg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center; /* Center the image */
+
+
+  border-radius: 15px;
+
+  flex: 1;
+  animation: apparationContenu 0.5s linear;
+  -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.242); 
+  box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.198);
+
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+#container{
+right: 0;
+font-family: Lato;
+color:rgb(212, 248, 233);
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  section:nth-child(1){
+    color:  #010201;
+    
+  }
+
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  section .text-container{
+     display: flex;
+  }
+  section .text-container .text-box{
+    margin: 20px;
+    padding: 20px;
+    background:#2fd4ae;
+    
+  }
+  .gros{
+    width: 50%;
+    height: 50%;
+    align-items: center;
+  }
+ 
+  
+  .inner-content{
+    width: 100%;
+    margin-right: 0;
+    float: right;
+  }
+  
+  section .text-container .text-box h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  @media (max-width: 900px){
+    section h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+    section .text-container{
+      flex-direction: column;
+    }
+  }
+#footer{
+  bottom:0;/* on le colle en bas */
+  display: flex;
+  flex-direction:column ;
+  margin-top: 100px;
+  border-top: solid 2px #2fd4ae;
+  background: #f3f3f3;
+  padding-top: 20px;
+  font-weight: normal;
+
+}
+.textef1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #afafaf;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+#textes11{
+  margin-top: 9em;
+
+
+} 
+  
+.textes1{
+  font-family: 'Raleway',sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #afafaf;
+
+}
+#text2{
+  width: 70%;
+}
+
+#txt, #text2{
+  margin-top: 200px;
+  font-family: Lato;
+  background-color: white;
+  border-radius: 8px;
+
+  -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+  box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098);
+  background-color: white;
+
+  text-align: center;
+  padding-bottom: 30px;
+}
+#txt>h3, #text2>h3{
+  font-family: Exo-Regular;
+}
+#txt>p, #text2>p{
+  margin-bottom: 30px;
+}
+
+.btnu-ctn{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#b2{
+  width: 50%;
+}
+#b2 img{
+  width: 100%;
+}
+
+#b3 img{
+  width: 100%;
+}
+#b2, #b2 img, #b3, #b3 img{
+  border-bottom-right-radius: 200px;
+  border-top-left-radius: 200px;
+}
+h1{
+  font-size: 12px;
+}
+.list1 img{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+#dash{
+  height: 400px;
+}
+
+#acc{
+  height: 400px;
+
+}

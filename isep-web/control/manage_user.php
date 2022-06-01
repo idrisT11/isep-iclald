@@ -1,5 +1,7 @@
 <?php
 
+
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/adminModel.php");
     session_start();
 
@@ -13,13 +15,14 @@
     //If the user give a token_user, we shall base on it to identify the profil
     if (isset($_GET['action'])) 
     {
+
         if ($_GET['action'] == 'delete_user' && isset($_GET['token_user'])) 
         {
             delete_user($db_connexion, $_GET['token_user']);
         }
 
 
-        header('Location: ./admin');
+        header('Location: ./admin/users');
         
     }
     

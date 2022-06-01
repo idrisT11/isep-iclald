@@ -2,6 +2,7 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 #window{
@@ -9,6 +10,7 @@ html, body{
     flex-direction: row;
 
     height: 100%;
+    width: 100%;
 }
 
 #window nav{
@@ -18,6 +20,8 @@ html, body{
 
 #window main{
     flex: 20;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /***********************************************************************/
@@ -193,6 +197,9 @@ main{
 
     border: none;
 }
+
+
+
 
 /*=======*/
 

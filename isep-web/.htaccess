@@ -1,7 +1,14 @@
 RewriteEngine On
 RewriteBase /isep-web/
 
-RewriteRule ^profil/([0-9A-F]+)$ index.php?token_user=$1
+RewriteRule ^profil/([0-9A-Fa-f]+)$ index.php?token_user=$1
+RewriteRule ^ticket/new$ index.php?new
+RewriteRule ^admin/users$ index.php?users
+RewriteRule ^admin/add-user$ index.php?add-user
+RewriteRule ^admin/acceuil-faq$ index.php?faq&admin
+RewriteRule ^admin/faq$ index.php?faq [QSA]
+RewriteRule ^admin/ticket$ index.php?ticket [QSA]
+RewriteRule ^forum/post/([0-9]+)$ index.php?post=$1
 
 
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -13,3 +20,5 @@ RewriteRule ^(.+)$ index.php [QSA,L]
 
 RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
 RewriteRule (.+) static/$1 [L]
+
+

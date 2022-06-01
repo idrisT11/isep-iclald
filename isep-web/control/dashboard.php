@@ -1,7 +1,9 @@
 <?php
     session_start();
-
+    
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/profilPicModel.php");
+    require_once( __DIR__ .  "/../model/dashModel.php");
 
     if (isset($_SESSION['connected']) && $_SESSION['connected']) {
 
@@ -12,14 +14,32 @@
             echo get_grandeur_value($_GET['grandeur'], $_GET['nb_val']);
         }
 
-        #Ici, on gere les requete du type changement de configurations
-        else if (isset($_GET['config'])) 
+        #Ici, on gere les requete du type changement et chargement de configurations
+        else if (isset($_GET['config']) && $_SESSION['role'] > 0) 
         {
-            if (isset($_GET['seuil'])) {
-                
-            }
-            else if (isset($_GET['Lumin'])){
 
+            if (isset($_GET['seuil'])) {
+                if (empty($_GET['seuil'])) 
+                {
+                    $value = get_seuil_from_salle($db_connexion, $_GET['salle']);
+                    echo $value;       
+                }
+                else
+                {
+                    set_seuil_from_salle($db_connexion, $_GET['salle'], $_GET['seuil']);
+                }         
+            }
+            else if (isset($_GET['lumin']))
+            {
+                if (empty($_GET['lumin'])) 
+                {
+                    $value = get_lumi_from_salle($db_connexion, $_GET['salle']);
+                    echo $value;
+                }
+                else
+                {
+                    set_lumi_from_salle($db_connexion, $_GET['salle'], $_GET['lumin']);
+                }
             }
             else{
                 include(__DIR__ . "/../view/dashboard_config.php");

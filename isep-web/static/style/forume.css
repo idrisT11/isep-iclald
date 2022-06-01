@@ -289,6 +289,37 @@ main{
     height: 30px;
 }
 
+
+#faq{
+    text-align: center;
+    position: sticky;
+    bottom: 15px;
+    left: 15px;
+
+    padding: 20px;
+    font-family: Lato;
+    color: #353535;
+
+    width: 300px;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
+    border-radius: 7px;
+
+    animation: deco_pop_down_anime 1s ease-in;
+
+}
+
+#faq a{
+    background-color: #2fd4ae;
+    padding: 5px;
+    border-radius: 7px;
+
+    color: white;
+    text-decoration: none;
+
+}
+
 /*=======*/
 
 #deco_pop_down{

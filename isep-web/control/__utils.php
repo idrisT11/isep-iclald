@@ -1,14 +1,15 @@
 <?php
     function isEmailValid($email)
     {
-        $regex = '/^[_a-z0-9-]+(/.[_a-z0-9-]+)*@[a-z0-9-]+(/.[a-z0-9-]+)*(/.[a-z]{2,3})$/'; 
-
-        return preg_match($regex, $email);
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 
     function isPasswordValid($password)
     {
-        if ( strlen( $password ) >= 4 &&  strlen( $password ) <= 40) {
+        $maj = '@[A-Z]@'; 
+        $min = '@[a-z]@'; 
+        $chi = '@[0-9]@'; 
+        if ( preg_match($chi, $password) && preg_match($maj, $password) && preg_match($min, $password) && strlen( $password ) >= 8 &&  strlen( $password ) <= 40) {
             return true;
         }
         else
@@ -39,7 +40,7 @@
     {
         $subject = $titre;
         $body = $contenu;
-        $headers = "From: Health's Fab" . "\r\n" ;
+        $headers = "From: health.fab@vgath.site" . "\r\n" ;
         $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
     
         

@@ -1,4 +1,6 @@
 <?php
+
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/__utils.php");
     session_start();
 

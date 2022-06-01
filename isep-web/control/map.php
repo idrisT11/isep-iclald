@@ -1,6 +1,7 @@
 <?php
     session_start();
 
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/profilPicModel.php");
     require_once( __DIR__ .  "/../model/mapModel.php");
 

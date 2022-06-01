@@ -1,5 +1,4 @@
 <?php
-    require_once( __DIR__ .  "/db_connect.php");
 
     $db_connexion = db_login();
 
@@ -58,6 +57,5 @@
         $request->bind_param("s", $email);
         $request->execute();
     }
-
 
 ?>

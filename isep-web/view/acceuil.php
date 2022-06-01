@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/acceuil.css">
+    <link rel="stylesheet" href="./static/style/acceuil.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="./static/style/mobile/acceuil.css" media="(max-width: 950px)">
     <link rel="stylesheet" href="./static/fonts/font.css">
     <link rel="stylesheet" href="./static/fonts/chat.css">
 
@@ -32,6 +33,16 @@
                 <a href="./map" class="nav_link">
                     <img src="./static/image/map.png" alt="map">
                 </a>
+
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="./ticket" class="nav_link">
+                        <img src="./static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
                       
             </div>
         </nav>
@@ -41,7 +52,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Acceuil</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>
@@ -58,16 +69,73 @@
                     </a>
                 </div>
 
-                <form method="GET" action="profils-search" id="form_recherche">
+                
+                <?php
+                    if ($_SESSION['role'] != 0) {
+                ?>
+                <form method="GET" action="./profils-search" id="form_recherche">
                     <h1>Vous recherchez quelqu'un ? Allez-y !</h1>
                     <div id="recherche">
                         <input type="text" id="recherche_input" name="recherche_input" placeholder="Entrez votre recherche"/>
                         <input type="submit" id="recherche_btn" value="Rechercher"/>
                     </div>
                 </form>
+                <?php
+                    } else {
+                        ?>
+                        <form id="form_recherche">
+                            <h1>Vous avez avez un problème ? contactez les administrateurs par email, ou par
+                                messagerie instantanée ! Vous pouvez toujours poser une question sur le forum ou verifier la FAQ.
+                            </h1>
+
+                        </form>
+                        <?php
+                            
+                    }
+                ?>
+
+                <div >
+                    <div id="acces_rapide">
+                        <h1>Information d'acces rapide : </h1>
+                        <a href="./dash" id="configure_link">
+                            Acceder au dashboard
+                        </a>
+                    </div>
+                    <div id="valeur_inst">
+                        <div class="zone_dash">
+                            <h1>Temperature ambiante</h1>
+                            <p id="tmp_instant">27.2°C</p>
+                        </div>
+
+                        <div class="zone_dash">
+                            <h1>Niveau <br/> sonore</h1>
+                            <p id="snr_instant">65 dB</p>
+                        </div>
+
+                        <div class="zone_dash">
+                            <h1>Niveau d'humidité</h1>
+                            <p id="hmd_instant">35%</p>
+                        </div>
+
+                        <div class="zone_dash">
+                            <h1>Battement Cardiaque</h1>
+                            <p id="crd_instant">80bpm</p>
+                        </div>
+                    </div>
+                </div>
 
 
-                <?php include(__DIR__ . "/chat.html"); ?>
+                <?php 
+                    if ($_SESSION['role'] < 2) {
+                        include(__DIR__ . "/chat.html"); 
+                        echo '<script src="./static/script/chat_user.js"></script>';
+                    }
+                    else{
+                        include(__DIR__ . "/chat_list.html"); 
+                        echo '<script src="./static/script/chat.js"></script>';
+
+                    }
+                ?>
 
 
             </section>
@@ -89,28 +157,11 @@
                 pop_down.style.display = 'flex';
             }
             displayed = !displayed;
-            console.log(displayed);
         }
     </script>
 
-    <script>
-        var btn = document.getElementById('nom_btn'),
-            pop_down = document.getElementById('deco_pop_down');
-        var displayed = false;
-        btn.onclick = ()=>{
-            if (displayed) {
-                pop_down.style.display = 'none';
-                
-            } else {
-                pop_down.style.display = 'flex';
-            }
-            displayed = !displayed;
-            console.log(displayed);
-        }
-    </script>
 
-    <script src="./static/script/chat.js"></script>
-    <script src="./static/script/acceuil.js"></script>
+    <!--<script src="./static/script/acceuil.js"></script>-->
 
 </body>
 </html>

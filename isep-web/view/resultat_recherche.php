@@ -31,6 +31,16 @@
                 <a href="./map" class="nav_link">
                     <img src="./static/image/map.png" alt="map">
                 </a>
+
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="./ticket" class="nav_link">
+                        <img src="./static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
                       
             </div>
         </nav>
@@ -40,7 +50,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Résultat de la recherche</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>

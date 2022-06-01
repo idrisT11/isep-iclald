@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/map.css">
     <link rel="stylesheet" href="./static/fonts/font.css">
+    <link rel="stylesheet" href="./static/style/map.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="./static/style/mobile/map.css" media="(max-width: 950px)">
 
     <title>DashBoard</title>
 </head>
@@ -32,6 +33,16 @@
                 <a href="./map" class="nav_link">
                     <img src="./static/image/map.png" alt="map">
                 </a>
+
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="./ticket" class="nav_link">
+                        <img src="./static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
                       
             </div>
         </nav>
@@ -41,7 +52,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Carte du Monde</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>

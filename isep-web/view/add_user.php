@@ -5,33 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/add_user.css">
-    <link rel="stylesheet" href="./static/fonts/font.css">
+    <link rel="stylesheet" href="../static/style/add_user.css">
+    <link rel="stylesheet" href="../static/fonts/font.css">
 
     <title>Forum</title>
 </head>
 <body>
     <div id="window">
         <nav>
-            <img src="./static/image/IM.png" width="50px" style="position: absolute">
+            <img src="../static/image/IM.png" width="50px" style="position: absolute">
 
             <div id="nav_ctn">
 
-                <a href="./" class="nav_link">
-                    <img src="./static/image/home.png" alt="home">
+                <a href="../" class="nav_link">
+                    <img src="../static/image/home.png" alt="home">
                 </a>
 
-                <a href="./dash" class="nav_link">
-                    <img src="./static/image/graph.png" alt="dashboard">
+                <a href="../dash" class="nav_link">
+                    <img src="../static/image/graph.png" alt="dashboard">
                 </a>
 
-                <a href="./forum" class="nav_link">
-                    <img src="./static/image/forum.png" alt="forum">
+                <a href="../forum" class="nav_link">
+                    <img src="../static/image/forum.png" alt="forum">
                 </a>
                 
-                <a href="./map" class="nav_link">
-                    <img src="./static/image/map.png" alt="map">
+                <a href="../map" class="nav_link">
+                    <img src="../static/image/map.png" alt="map">
                 </a>
+
+                
                       
             </div>
         </nav>
@@ -41,7 +43,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Nouvel utilisateur</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>
@@ -53,7 +55,7 @@
                         Ajouter un utilisateur :
                     </h1>
 
-                    <a href="./admin" id="configure_link" style="font-weight: bold;">
+                    <a href="../admin" id="configure_link" style="font-weight: bold;">
                         retour ➽
                     </a>
 

@@ -328,6 +328,127 @@ main{
 }
 
 
+.sign{
+
+    width: 115px;
+    height: 100px;
+    clear: both;
+    margin-right: 15px;
+    margin-left: 10px;
+
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: auto 100%; /* Resize the background image to cover the entire container */
+}
+
+#sign-closed{
+    background-image: url('../image/closed.svg');
+}
+
+#sign-open{
+    background-image: url('../image/open.svg');
+}
+
+#sign-resolved{
+    background-image: url('../image/solved.png');
+    width: 140px;
+    height: 105px;
+
+}
+
+
+.delete_button{
+    color: #2fd4ae;
+    border-radius: 5px;
+    font-family: Exo-Regular;
+    text-decoration: none;
+
+    font-size: 20px;
+    padding: 7px;
+    font-weight: bold;
+    margin: 5px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.suprime_button{
+    background-color: #d02b51;
+    color: white;
+    border-radius: 5px;
+    font-family: Exo-Regular;
+    text-decoration: none;
+
+    font-size: 20px;
+    padding: 7px;
+    font-weight: bold;
+    margin: 5px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;  
+}
+
+.details_button{
+    background-color: #2fd4ae;
+    color: white;
+    border-radius: 5px;
+    font-family: Exo-Regular;
+
+    font-size: 20px;
+    padding: 7px;
+    font-weight: bold;
+    margin: 5px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+#main_post_resolved{
+    display: flex;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 36px 9px #2fd4aef2; 
+    box-shadow: 5px 5px 36px 9px #2fd4aef2; 
+    padding: 15px;
+    margin: 5px;
+    
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#main_post_open{
+    display: flex;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098); 
+    padding: 15px;
+    margin: 5px;
+    
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;  
+}
+
+#main_post_closed{
+    display: flex;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 36px 9px #d02b5158; 
+    box-shadow: 5px 5px 36px 9px #d02b5158; 
+    padding: 15px;
+    margin: 5px;
+    
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;  
+}
+
 /*=======*/
 
 #deco_pop_down{

@@ -3,16 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>Profil</title>
-	<link rel="stylesheet" type="text/css" href="./static/style/page-profil.css">
-	<link rel="stylesheet" type="text/css" href="./static/fonts/font.css">
-	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="/isep-web/static/style/page-profil.css" media="(min-width: 950px)">
+	<link rel="stylesheet" href="/isep-web/static/style/mobile/page-profil.css" media="(max-width: 950px)">
+	<link rel="stylesheet" href="/isep-web/static/fonts/font.css" >
+	<!--<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">-->
 	
 </head>
 <body>
 	<header id="head">
-		<p>
-			<a href="Page d'accueil"><img src=".\static\image\IM.png" alt="Home"></a>
-		</p>
+
 		
 		<figure >
 			<form action="changeProfilPic" method="POST" enctype="multipart/form-data" id="formImage">
@@ -28,7 +30,7 @@
 		</figure>
 
 		<div class="formSub">
-            <a type="submit" id="submit" class="submitOff" href="./"> RETOUR </a>
+            <a type="submit" id="submit" class="submitOff" href="/isep-web/"> Retour </a>
         </div>
 
 	</header>

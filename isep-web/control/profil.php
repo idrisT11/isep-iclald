@@ -1,5 +1,7 @@
 <?php
 
+
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/profilModel.php");
     session_start();
 

@@ -5,33 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/manage_user.css">
-    <link rel="stylesheet" href="./static/fonts/font.css">
-    <link rel="stylesheet" href="./static/fonts/chat.css">
+    <link rel="stylesheet" href="../static/style/manage_user.css">
+    <link rel="stylesheet" href="../static/fonts/font.css">
+    <link rel="stylesheet" href="../static/fonts/chat.css">
 
     <title>Acceuil</title>
 </head>
 <body>
     <div id="window">
         <nav>
-            <img src="./static/image/IM.png" width="50px" style="position: absolute">
+            <img src="../static/image/IM.png" width="50px" style="position: absolute">
 
             <div id="nav_ctn">
 
-                <a href="./" class="nav_link">
-                    <img src="./static/image/home.png" alt="home">
+                <a href="../" class="nav_link">
+                    <img src="../static/image/home.png" alt="home">
                 </a>
 
-                <a href="./dash" class="nav_link">
-                    <img src="./static/image/graph.png" alt="dashboard">
+                <a href="../dash" class="nav_link">
+                    <img src="../static/image/graph.png" alt="dashboard">
                 </a>
 
-                <a href="./forum" class="nav_link">
-                    <img src="./static/image/forum.png" alt="forum">
+                <a href="../forum" class="nav_link">
+                    <img src="../static/image/forum.png" alt="forum">
                 </a>
                 
-                <a href="./map" class="nav_link">
-                    <img src="./static/image/map.png" alt="map">
+                <a href="../map" class="nav_link">
+                    <img src="../static/image/map.png" alt="map">
                 </a>
                       
             </div>
@@ -42,10 +42,10 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Gestion d'utilisateur</h1> 
-                    <p>Samedi 30 avril 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
-                <?php include(__DIR__ . '/_header.php'); ?>
+                <?php include(__DIR__ . '/_header_admin.php'); ?>
             </div>
 
             <section id="content">
@@ -90,10 +90,10 @@
 
 
                                     <div class="result_footer">       
-                                        <a class="delete_button" href="./admin?action=delete_user&token_user=<?= $user['TOKEN_USER']?>">
+                                        <a class="delete_button" href="../admin?users&action=delete_user&token_user=<?= $user['TOKEN_USER']?>">
                                             Supprimer
                                         </a>                             
-                                        <a class="details_button" href="./profil?token_user=<?= $user['TOKEN_USER']?>">
+                                        <a class="details_button" href="../profil/<?= $user['TOKEN_USER']?>">
                                             Détails
                                         </a>
                                     </div>
@@ -106,8 +106,6 @@
                     ?>
                 </div>
 
-
-                <?php include(__DIR__ . "/chat.html"); ?>
 
 
             </section>
@@ -135,8 +133,6 @@
 
 
 
-    <script src="./static/script/chat.js"></script>
-    <script src="./static/script/acceuil.js"></script>
 
 </body>
 </html>

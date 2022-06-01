@@ -1,8 +1,4 @@
 <?php
-
-    require_once( __DIR__ .  "/db_connect.php");
-
-
     $db_connexion = db_login();
 
     if($db_connexion->connect_error)

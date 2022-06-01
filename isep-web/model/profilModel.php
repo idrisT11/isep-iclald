@@ -1,5 +1,4 @@
 <?php
-    require_once( __DIR__ .  "/db_connect.php");
 
     $db_connexion = db_login();
 
@@ -82,6 +81,5 @@
         $request->bind_param("sssssssssss", $nom, $prenom, $email, $token, $salle, $genre, $datenaissance, $ville, $taille, $poid, $id);
         $request->execute();
     }
-
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/adminModel.php");
     session_start();
 
@@ -26,7 +26,7 @@
         add_user($db_connexion, $nom, $prenom, $email, $role, $genre, $salle, $datenaissance, $ville, $taille, $poid);
 
 
-        header('Location: ./admin');
+        header('Location: ../admin/users');
     }
     
     else

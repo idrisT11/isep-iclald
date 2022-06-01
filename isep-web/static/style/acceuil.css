@@ -176,6 +176,52 @@ main{
     color: white;
 }
 
+#acces_rapide>h1{
+    font-family: Exo-Regular;
+    color: #2fd4ae;
+    padding-left: 40px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    display: inline-block;
+}
+
+
+#valeur_inst{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.zone_dash{
+    border-radius: 5px;
+
+    -webkit-box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.142); 
+    box-shadow: 5px 5px 36px 9px rgba(0, 0, 0, 0.098);
+    background-color: white;
+
+    padding: 15px;
+    width: 200px;
+
+    opacity: 0.9;
+}
+
+.zone_dash h1{
+    font-family: Exo-Regular;
+    margin: 5px;
+    font-size: 30px;
+
+}
+
+.zone_dash p{
+    font-family: Lato;
+    text-align: right;
+    text-decoration: underline;
+    margin: 0px;
+    font-size: 20px;
+}
+
 /*=======*/
 
 #deco_pop_down{

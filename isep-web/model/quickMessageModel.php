@@ -1,10 +1,50 @@
 <?php
-    require_once( __DIR__ .  "/db_connect.php");
 
     $db_connexion = db_login();
 
     if($db_connexion->connect_error)
         die('Erreur : ' .$conn->connect_error);
+
+    function get_pic_from_id($db_connexion, $id){
+        $cmd = "SELECT * FROM users WHERE ID = ?";
+        $request = $db_connexion->prepare($cmd);
+        $request->bind_param("s", $id);
+        $request->execute();
+        $result = $request->get_result();
+        $row = $result->fetch_assoc();
+        
+        $token = $row['TOKEN_USER'];
+
+        if ( file_exists('./static/image/profil_pic/'.$token.'.png') ) {
+            return '/isep-web/static/image/profil_pic/'.$token.'.png';
+        }
+        else{
+            return '/isep-web/static/image/profil_pic/default.png';
+        }
+    }
+
+    function get_name_from_id($db_connexion, $id){
+        $cmd = "SELECT * FROM users WHERE ID = ?";
+        $request = $db_connexion->prepare($cmd);
+        $request->bind_param("s", $id);
+        $request->execute();
+        $result = $request->get_result();
+        $row = $result->fetch_assoc();
+        
+        return $row['NOM'];
+    }
+
+    function get_surname_from_id($db_connexion, $id){
+        $cmd = "SELECT * FROM users WHERE ID = ?";
+        $request = $db_connexion->prepare($cmd);
+        $request->bind_param("s", $id);
+        $request->execute();
+        $result = $request->get_result();
+        $row = $result->fetch_assoc();
+        
+        return $row['PRENOM'];
+    }
+
 
     function get_id_from_email($db_connexion, $email){
         $cmd = "SELECT * FROM users WHERE EMAIL = ?";
@@ -32,12 +72,21 @@
         }
         else
             return NULL;
+    }
 
+    function get_convs($db_connexion){
+        $cmd = "SELECT * FROM conversation";
+        $request = $db_connexion->prepare($cmd);
+        $request->execute();
+        $result = $request->get_result(); 
+        $row = $result->fetch_all(MYSQLI_ASSOC);
+
+        return $row;
     }
 
     function update_conversation($db_connexion, $id_user, $conversation)
     {
-        $cmd = "UPDATE conversation SET CONTENU = ? WHERE USER = ?";
+        $cmd = "UPDATE conversation SET CONTENU = ?, LAST_MESSAGE=current_timestamp(), LU=0 WHERE USER = ?";
         $request = $db_connexion->prepare($cmd);
         $request->bind_param("ss", $conversation, $id_user);
         $request->execute();

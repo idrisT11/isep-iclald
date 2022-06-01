@@ -1,7 +1,7 @@
 <?php
     
     session_start();
-
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "/../model/verifyModel.php");
 
     if(isset($_SESSION['connected'])){

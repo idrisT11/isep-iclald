@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/forume.css">
-    <link rel="stylesheet" href="./static/fonts/font.css">
 
+    <link rel="stylesheet" href="./static/fonts/font.css">
+    <link rel="stylesheet" href="./static/style/forume.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="./static/style/mobile/forume.css" media="(max-width: 950px)">
     <title>Forum</title>
 </head>
 <body>
@@ -32,6 +33,16 @@
                 <a href="./map" class="nav_link">
                     <img src="./static/image/map.png" alt="map">
                 </a>
+
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="./ticket" class="nav_link">
+                        <img src="./static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
                       
             </div>
         </nav>
@@ -41,7 +52,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Forum</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>
@@ -94,7 +105,7 @@
                                     }
                                 ?>
 
-                                    <a class="respond_post" href="./forum?post=<?= $topic['ID'] ?>">
+                                    <a class="respond_post" href="./forum/post/<?= $topic['ID'] ?>">
                                         Répondre 
                                         <!--<img src="./static/image/R.png" alt="l">-->
                                     </a>
@@ -111,6 +122,16 @@
 
 
             </section>
+
+
+            <div id="faq">
+                <img src="./static/image/baguette.svg" width="50px" height="50px"> <br/><br/>
+                Avez-vous vérifier si votre question ce trouve dans la FAQ ? 
+                <br/>
+                <br/>
+
+                <a href="./faq"> Foire Aux Questions </a>
+            </div>
         </main>
     </div>
 

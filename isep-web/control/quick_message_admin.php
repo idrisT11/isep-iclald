@@ -1,8 +1,10 @@
 <?php
     session_start(); 
+
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "\..\model\\quickMessageModel.php");
 
-    if (isset($_SESSION['connected']) && $_SESSION['connected'] && $_SESSION['role']) {
+    if (isset($_SESSION['connected']) && $_SESSION['connected'] && $_SESSION['role']=='2') {
         
         if (!isset($_GET['action'])) {
 
@@ -10,37 +12,46 @@
             die();
         }
 
-        else if (isset($_GET['action']) && $_GET['action'] == 'get') {
-            # code...
+        else if (isset($_GET['action']) && $_GET['action'] == 'get_convs') 
+        {
+            $convs_list = get_convs($db_connexion);
+
+            for ($i=0; $i < count($convs_list); $i++) { 
+                $id = $convs_list[$i]['USER'];
+                $convs_list[$i]['PIC_PATH'] = get_pic_from_id($db_connexion, $id);
+                $convs_list[$i]['PRENOM'] = get_name_from_id($db_connexion, $id);
+                $convs_list[$i]['NOM'] = get_surname_from_id($db_connexion, $id);
+            }
+
+            echo json_encode($convs_list);
+        }
+
+        else if (isset($_GET['action']) && $_GET['action'] == 'get_conv' && isset($_GET['user'])) 
+        {
+            $conv = get_conv_from_userID($db_connexion, $_GET['user']);
+
+            echo json_encode($conv);
         }
 
         //ADD A NEW MESSAGE
-        if ($_GET['action'] == 'write' && isset($_GET['content']) && !empty($_GET['content'])) 
-        {
-            
+        if ($_GET['action'] == 'write' && isset($_GET['content']) && !empty($_GET['content']) && isset($_GET['user'])) 
+        {   
             $email = $_SESSION['email'];
-            $id_user = get_id_from_email($db_connexion, $email);
+            $id_user = $_GET['user'];
+            $id_admin = get_id_from_email($db_connexion, $email);
             $new_message = $_GET['content'];
 
             $conversation = get_conv_from_userID($db_connexion, $id_user);
             
-            //SI L'USER A DEJA INITIER UNE CONV
+            //L'USER A DEJA INITIER UNE CONV (Par securité on fait ça)
             if (!is_null($conversation) ) 
             {
                 $conversation = json_decode($conversation);
                 $id = count($conversation);
 
-                $conversation[] = array('id'=>$id, 'writer'=>'user', 'content'=>$new_message);
+                $conversation[] = array('id'=>$id, 'writer'=>'admin', 'content'=>$new_message);
                 $conv_json = json_encode($conversation);
                 update_conversation($db_connexion, $id_user, $conv_json); 
-            }
-            //SI L'USER INITIE UNE CONV POUR LA PREMIERE FOIS
-            else
-            {
-                $conversation = array();
-                $conversation[] = array('id'=>0, 'writer'=>'user', 'content'=>$new_message);
-                $conv_json = json_encode($conversation);
-                create_conversation($db_connexion, $id_user, $conv_json);
             }
                
         }

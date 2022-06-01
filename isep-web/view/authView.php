@@ -158,116 +158,237 @@
             
         }
 
-        #inscriptionPanel{
-            background-color: rgba(240, 240, 240, 0.20);
-            border-radius: 7px;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        @media only screen and (min-width: 800px) {
 
-            width: 18%;
-            height: 300px;
-            padding: 20px;
 
-            backdrop-filter: blur(16px);
+            #inscriptionPanel{
+                background-color: rgba(240, 240, 240, 0.20);
+                border-radius: 7px;
+                box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
-        }
+                width: 18%;
+                height: 300px;
+                padding: 20px;
 
-        #inscriptionPanel h1{
-            font-family: Exo-ExtraLight;
-            text-align: center;
-            color: #444;
-        }
+                backdrop-filter: blur(16px);
 
-        .formElem {
-            text-align: center;
-        }
+            }
 
-        .formElem input{
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 7px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            width: 80%;
+            #inscriptionPanel h1{
+                font-family: Exo-ExtraLight;
+                text-align: center;
+                color: #444;
+            }
 
-            backdrop-filter: blur(12px);
-            border: 0;
+            .formElem {
+                text-align: center;
+            }
 
-            font-size: 16px;
-            padding: 8px;
-            margin: 15px;
+            .formElem input{
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 7px;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                width: 80%;
 
-            font-family: Exo-ExtraLight;
+                backdrop-filter: blur(12px);
+                border: 0;
+
+                font-size: 16px;
+                padding: 8px;
+                margin: 15px;
+
+                font-family: Exo-ExtraLight;
+                
+            }
+
+            .formElem a {
+                display: block;
+                font-size: 14px;
+                padding: 5px;
+                margin: 17px;
+                text-align: center;   
+
+                color: #444;
+
+                font-family: Exo-Light-Italic;
+                text-decoration: none;
+
+            }
             
-        }
-
-        .formElem a {
-            display: block;
-            font-size: 14px;
-            padding: 5px;
-            margin: 17px;
-            text-align: center;   
-
-            color: #444;
-
-            font-family: Exo-Light-Italic;
-            text-decoration: none;
-
-        }
+            .formSub{
+                text-align: center;
         
-        .formSub{
-            text-align: center;
-      
+            }
+
+            .carre_wesh{
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 11px;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                backdrop-filter: blur(12px);
+
+                position: absolute;
+                margin: 0;
+                clear:both;
+
+
+            }
+
+            #carre_haut_gauche{
+                min-width: 60px;
+                min-height: 60px;
+
+                transform: translate(-100%, -100%);
+                animation: rotatus1 1s ease-in;
+            }
+
+            #carre_haut_droit{
+                min-width: 75px;
+                min-height: 75px;
+                right: 0;
+                top: 0;
+
+                transform: translate(65%, -65%);
+                animation: rotatus2 1s ease-in;
+            }
+
+            #carre_bas_droit{
+                min-width: 60px;
+                min-height: 60px;
+                right: 0;
+                bottom: 0;
+
+                transform: translate(50%, 50%);
+                animation: rotatus3 1s ease-in;
+            }
+
+            #carre_bas_gauche{
+                min-width: 80px;
+                min-height: 80px;
+                left: 0;
+                bottom: 0;
+
+                transform: translate(-50%, 50%);
+                animation: rotatus4 1s ease-in;
+
+            }
         }
 
-        .carre_wesh{
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 11px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            backdrop-filter: blur(12px);
-
-            position: absolute;
-            margin: 0;
-            clear:both;
+        @media only screen and (max-width: 800px) {
 
 
+            #inscriptionPanel{
+                background-color: rgba(240, 240, 240, 0.20);
+                border-radius: 7px;
+                box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+                width: 75%;
+                height: 300px;
+                padding: 20px;
+
+                backdrop-filter: blur(16px);
+
+            }
+
+            #inscriptionPanel h1{
+                font-family: Exo-ExtraLight;
+                text-align: center;
+                color: #444;
+            }
+
+            .formElem {
+                text-align: center;
+            }
+
+            .formElem input{
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 7px;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                width: 80%;
+
+                backdrop-filter: blur(12px);
+                border: 0;
+
+                font-size: 16px;
+                padding: 8px;
+                margin: 15px;
+
+                font-family: Exo-ExtraLight;
+                
+            }
+
+            .formElem a {
+                display: block;
+                font-size: 14px;
+                padding: 5px;
+                margin: 17px;
+                text-align: center;   
+
+                color: #444;
+
+                font-family: Exo-Light-Italic;
+                text-decoration: none;
+
+            }
+
+            .formSub{
+                text-align: center;
+
+            }
+
+            .carre_wesh{
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 11px;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                backdrop-filter: blur(12px);
+
+                position: absolute;
+                margin: 0;
+                clear:both;
+
+                display: none;
+            }
+
+            #carre_haut_gauche{
+                min-width: 60px;
+                min-height: 60px;
+
+                transform: translate(-100%, -100%);
+                animation: rotatus1 1s ease-in;
+            }
+
+            #carre_haut_droit{
+                min-width: 75px;
+                min-height: 75px;
+                right: 0;
+                top: 0;
+
+                transform: translate(65%, -65%);
+                animation: rotatus2 1s ease-in;
+            }
+
+            #carre_bas_droit{
+                min-width: 60px;
+                min-height: 60px;
+                right: 0;
+                bottom: 0;
+
+                transform: translate(50%, 50%);
+                animation: rotatus3 1s ease-in;
+            }
+
+            #carre_bas_gauche{
+                min-width: 80px;
+                min-height: 80px;
+                left: 0;
+                bottom: 0;
+
+                transform: translate(-50%, 50%);
+                animation: rotatus4 1s ease-in;
+
+            }
         }
 
-        #carre_haut_gauche{
-            min-width: 60px;
-            min-height: 60px;
 
-            transform: translate(-100%, -100%);
-            animation: rotatus1 1s ease-in;
-        }
-
-        #carre_haut_droit{
-            min-width: 75px;
-            min-height: 75px;
-            right: 0;
-            top: 0;
-
-            transform: translate(65%, -65%);
-            animation: rotatus2 1s ease-in;
-        }
-
-        #carre_bas_droit{
-            min-width: 60px;
-            min-height: 60px;
-            right: 0;
-            bottom: 0;
-
-            transform: translate(50%, 50%);
-            animation: rotatus3 1s ease-in;
-        }
-
-        #carre_bas_gauche{
-            min-width: 80px;
-            min-height: 80px;
-            left: 0;
-            bottom: 0;
-
-            transform: translate(-50%, 50%);
-            animation: rotatus4 1s ease-in;
-
-        }
 
         @keyframes rotatus1 {
             from{

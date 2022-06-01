@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Profil</title>
-	<link rel="stylesheet" type="text/css" href="./static/style/page-profil.css">
-	<link rel="stylesheet" type="text/css" href="./static/fonts/font.css">
+
+	<link rel="stylesheet" href="/isep-web/static/style/page-profil.css" media="(min-width: 950px)">
+	<link rel="stylesheet" href="/isep-web/static/style/mobile/page-profil.css" media="(max-width: 950px)">	<link rel="stylesheet" type="text/css" href="/isep-web/static/fonts/font.css">
 	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 	
 </head>
@@ -28,7 +29,7 @@
 		</figure>
 
 		<div class="formSub">
-            <a type="submit" id="submit" class="submitOff" href="./"> RETOUR </a>
+            <a type="submit" id="submit" class="submitOff" href="/isep-web/"> Retour </a>
         </div>
 
 	</header>
@@ -59,8 +60,8 @@
 
 			<div id="autres">
 				<h4>Divers</h4>	
-				<h5>Taille</h5>
-                <input class="type" type="text" value="<?= $user['TAILLE'] ?>" name="taille" placeholder="cm">
+				<h5>Taille en cm</h5>
+                <input class="type" type="text" value="<?= $user['TAILLE'] ?>" name="taille">
 				<h5>Poids en kg</h5>
                 <input class="type" type="text" value="<?= $user['POID'] ?>" name="poid">
 		

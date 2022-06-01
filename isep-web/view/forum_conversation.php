@@ -5,33 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/forume_conversation.css">
-    <link rel="stylesheet" href="./static/fonts/font.css">
 
+    <link rel="stylesheet" href="<?= $origin ?>static/fonts/font.css">
+    <link rel="stylesheet" href="<?= $origin ?>static/style/forume_conversation.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="<?= $origin ?>static/style/mobile/forume_conversation.css" media="(max-width: 950px)">
     <title>Forum</title>
 </head>
 <body>
     <div id="window">
         <nav>
-            <img src="./static/image/IM.png" width="50px" style="position: absolute">
+            <img src="<?= $origin ?>static/image/IM.png" width="50px" style="position: absolute">
 
             <div id="nav_ctn">
 
-                <a href="./" class="nav_link">
-                    <img src="./static/image/home.png" alt="home">
+                <a href="<?= $origin ?>" class="nav_link">
+                    <img src="<?= $origin ?>static/image/home.png" alt="home">
                 </a>
 
-                <a href="./dash" class="nav_link">
-                    <img src="./static/image/graph.png" alt="dashboard">
+                <a href="<?= $origin ?>dash" class="nav_link">
+                    <img src="<?= $origin ?>static/image/graph.png" alt="dashboard">
                 </a>
 
-                <a href="./forum" class="nav_link">
-                    <img src="./static/image/forum.png" alt="forum">
+                <a href="<?= $origin ?>forum" class="nav_link">
+                    <img src="<?= $origin ?>static/image/forum.png" alt="forum">
                 </a>
                 
-                <a href="./map" class="nav_link">
-                    <img src="./static/image/map.png" alt="map">
+                <a href="<?= $origin ?>map" class="nav_link">
+                    <img src="<?= $origin ?>static/image/map.png" alt="map">
                 </a>
+
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="<?= $origin ?>ticket" class="nav_link">
+                        <img src="<?= $origin ?>static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
                       
             </div>
         </nav>
@@ -41,7 +52,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Forum</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>
@@ -53,7 +64,7 @@
                     TOPIC #<?= $topic['ID'] ?>: <em><?= $topic['TITRE'] ?></em>
                     </h1>
 
-                    <a href="./forum" id="configure_link" style="font-weight: bold;">
+                    <a href="<?= $origin ?>forum" id="configure_link" style="font-weight: bold;">
                         Retour
                     </a>
 
@@ -79,7 +90,7 @@
                             </div>
                         </div>
 
-                        <form action="./forum?action=respond&post=<?=$topic['ID']?>" id="response" method="POST">
+                        <form action="<?= $origin ?>forum?action=respond&post=<?=$topic['ID']?>" id="response" method="POST">
                             <h2>Ecrire votre réponse ici :</h2>
                             <textarea name="reponse" id="reponse">
 

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/forume_post.css">
+    <link rel="stylesheet" href="./static/style/forume_post.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="./static/style/mobile/forume_post.css" media="(max-width: 950px)">
     <link rel="stylesheet" href="./static/fonts/font.css">
 
     <title>Forum</title>
@@ -41,7 +42,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>Nouveau Topic</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . './_header.php'); ?>

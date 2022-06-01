@@ -1,3 +1,7 @@
+<?php
+    $current_salle = isset($_GET['config']) ? $_GET['config'] : $_SESSION['salle'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +36,16 @@
                 <a href="./map" class="nav_link">
                     <img src="./static/image/map.png" alt="map">
                 </a>
+
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="./ticket" class="nav_link">
+                        <img src="./static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
                       
             </div>
         </nav>
@@ -41,7 +55,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>DashBoard</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>
@@ -50,7 +64,7 @@
             <section id="content">
                 <div id="content_header">
                     <h1 id="title_content">
-                        Configurations de la <em> salle <?php echo $_SESSION['salle']?> </em> :
+                        Configurations de la <em> salle <?= $current_salle ?> </em> :
                     </h1>
 
                     <a href="./dash" id="configure_link">
@@ -63,9 +77,9 @@
                     <h1>Configurer le seuil de detection sonore :</h1>
 
                     <div>
-                        <div class="db_btn" id="selected_db_btn">68 dB</div>
-                        <div class="db_btn">74 dB</div>
-                        <div class="db_btn">80 dB</div>
+                        <div id="68" class="db_btn">68 dB</div>
+                        <div id="74" class="db_btn">74 dB</div>
+                        <div id="80" class="db_btn">80 dB</div>
                     </div>
                 </div>
 
@@ -73,17 +87,17 @@
                 <div id="config_lumi">
                 <h1>Configurer la luminosité de l'écran :</h1>
                     <div id="bar_lumi">
-                        <span>❰</span>
-                        <div class="colored" class="lumi_btn"></div>
-                        <div class="colored" class="lumi_btn"></div>
-                        <div class="colored" class="lumi_btn"></div>
+                        <span id="left_lumi_arrow">❰</span>
+                        <div class="lumi_btn"></div>
+                        <div class="lumi_btn"></div>
+                        <div class="lumi_btn"></div>
                         <div class="lumi_btn"></div>
 
                         <div class="lumi_btn"></div>
                         <div class="lumi_btn"></div>
                         <div class="lumi_btn"></div>
                         <div class="lumi_btn"></div>
-                        <span>❱</span>
+                        <span id="right_lumi_arrow">❱</span>
                     </div>
                 </div>
 
@@ -106,6 +120,12 @@
             console.log(displayed);
         }
     </script>
+
+    <script>
+        var salle = <?= $_GET['config'] ?>;
+    </script>
+
+    <script src="./static/script/dash_gest.js"></script>
 
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">

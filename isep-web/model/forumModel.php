@@ -1,5 +1,4 @@
 <?php
-    require_once( __DIR__ .  "/db_connect.php");
 
     $db_connexion = db_login();
 
@@ -107,14 +106,5 @@
         }
     }
 
-    function update_user($db_connexion, $nom, $prenom, $email, $genre, $salle, $datenaissance, $ville, $taille, $poid)
-    {
-        $token = hash('sha256', $email);
-        $cmd = "UPDATE `users`
-        SET `NOM` = ?, `PRENOM`=?, `EMAIL`=?, `TOKEN_USER`=?, `SALLE`=?,  `GENRE`=?, `DATE_NAISSANCE`=?, `VILLE`=?, `TAILLE`=?, `POID`=?";
-        $request = $db_connexion->prepare($cmd);
-        $request->bind_param("ssssssssss", $nom, $prenom, $email, $token, $salle, $genre, $datenaissance, $ville, $taille, $poid);
-        $request->execute();
-    }
 
 ?>

@@ -1,5 +1,6 @@
 <?php
     session_start(); 
+    require_once( __DIR__ .  "/../model/db_connexion.php");
     require_once( __DIR__ .  "\..\model\\quickMessageModel.php");
 
     if (isset($_SESSION['connected']) && $_SESSION['connected']) {
@@ -39,14 +40,44 @@
             }
                
         }
-        else if ($_GET['action'] == 'read_new' && isset($_GET['ID'])) {
-            
+        else if ($_GET['action'] == 'read_new' && isset($_GET['id'])) 
+        {
+            $email = $_SESSION['email'];
+            $id_user = get_id_from_email($db_connexion, $email);
+            $conversation = get_conv_from_userID($db_connexion, $id_user);
+
+            if (is_null($conversation) ){
+                die("0");
+            }
+
+            if ($_GET['id'] == '-1') 
+            {
+                $email = $_SESSION['email'];
+                $id_user = get_id_from_email($db_connexion, $email);
+                $conversation = get_conv_from_userID($db_connexion, $id_user);
+    
+                echo $conversation; 
+            }
+            else
+            {
+                $email = $_SESSION['email'];
+                $id_user = get_id_from_email($db_connexion, $email);
+                $conversation = get_conv_from_userID($db_connexion, $id_user);
+                $conv_ar = json_decode($conversation);
+                $conv_ar = array_slice($conv_ar, $_GET['id']+1 );
+
+                echo json_encode($conv_ar); 
+            }
         }
         else if ($_GET['action'] == 'read_all') {
 
             $email = $_SESSION['email'];
             $id_user = get_id_from_email($db_connexion, $email);
             $conversation = get_conv_from_userID($db_connexion, $id_user);
+
+            if (is_null($conversation) ){
+                die("0");
+            }
 
             echo $conversation;
         }

@@ -129,6 +129,33 @@ main{
     margin-top: 0px;
 }
 
+#salle_ctn{
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.salle_link{
+    margin: 10px;
+    background-color: white;
+    font-family: Lato;
+    font-size: 23px;
+    border-radius: 9px;
+    color: #222;
+    text-decoration: none;
+    padding: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    box-shadow: 0 0 15px 1px #3332;
+}
+
+#salle_link_selected{
+    background-color: #2fd4ae;
+    box-shadow: 0 0 15px 1px #2fd4ae66;
+    color: white;
+}
+
 /*-----*/
 
 #valeur_inst{
@@ -166,6 +193,8 @@ main{
     margin: 0px;
     font-size: 20px;
 }
+
+
 
 /*----------------------------*/
 #graph_screen{

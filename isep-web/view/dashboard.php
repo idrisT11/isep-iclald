@@ -1,3 +1,7 @@
+
+<?php
+    $current_salle = isset($_GET['salle']) ? $_GET['salle'] : $_SESSION['salle'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./static/style/dashboard.css">
+    <link rel="stylesheet" href="./static/style/dashboard.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="./static/style/mobile/dashboard.css" media="(max-width: 950px)">
     <link rel="stylesheet" href="./static/fonts/font.css">
 
     <title>DashBoard</title>
@@ -32,6 +37,16 @@
                 <a href="./map" class="nav_link">
                     <img src="./static/image/map.png" alt="map">
                 </a>
+
+                <?php
+                    if ($_SESSION['role'] == 1) {
+                ?>
+                    <a href="./ticket" class="nav_link">
+                        <img src="./static/image/ticket.svg" alt="map">
+                    </a>
+                <?php
+                    }
+                ?>
                       
             </div>
         </nav>
@@ -41,7 +56,7 @@
             <div id="header">
                 <div id="header_title">
                     <h1>DashBoard</h1> 
-                    <p>Vendredi 6 mai 2022</p> 
+                    <p><?=$datum?></p> 
                 </div>
 
                 <?php include(__DIR__ . '/_header.php'); ?>
@@ -50,12 +65,45 @@
             <section id="content">
                 <div id="content_header">
                     <h1 id="title_content">
-                        Valeurs concernant la salle <?php echo $_SESSION['salle']?> :
+                        Valeurs concernant la salle <?= $current_salle ?> :
                     </h1>
 
-                    <a href="./dash?config" id="configure_link">
-                        Configuration ➽
-                    </a>
+                    <?php 
+                    if ($_SESSION['role'] > 0) 
+                    {
+                    ?>
+                        <a href="./dash?config=<?=$current_salle?>" id="configure_link">
+                            Configuration ➽
+                        </a>
+                    <?php
+                    }
+                    ?>
+
+                    <?php 
+                    if ($_SESSION['role'] > 0) 
+                    {
+                    ?>
+                    <div id="salle_ctn">
+                        <a href="./dash?salle=11" class="salle_link" <?= ($current_salle=="11")?'id="salle_link_selected"': '' ?>>
+                            Salle 11
+                        </a>
+                        <a href="./dash?salle=12" class="salle_link" <?= ($current_salle=="12")?'id="salle_link_selected"': '' ?>>
+                            Salle 12
+                        </a>
+                        <a href="./dash?salle=13" class="salle_link" <?= ($current_salle=="13")?'id="salle_link_selected"': '' ?>>
+                            Salle 13
+                        </a>
+                        <a href="./dash?salle=14" class="salle_link" <?= ($current_salle=="14")?'id="salle_link_selected"': '' ?>>
+                            Salle 14
+                        </a>
+                        <a href="./dash?salle=15" class="salle_link" <?= ($current_salle=="15")?'id="salle_link_selected"': '' ?>>
+                            Salle 15
+                        </a>
+                    </div>
+                    <?php
+                    }
+                    ?>
+
                 </div>
 
 
@@ -66,12 +114,12 @@
                     </div>
 
                     <div class="zone_dash">
-                        <h1>Niveau sonore</h1>
+                        <h1>Niveau <br> sonore</h1>
                         <p id="snr_instant">65 dB</p>
                     </div>
 
                     <div class="zone_dash">
-                        <h1>Niveau d'humidité</h1>
+                        <h1>Niveau <br> d'humidité</h1>
                         <p id="hmd_instant">35%</p>
                     </div>
 
